@@ -17,7 +17,7 @@ GET     /public/*filepath                       Static.Serve("public")
 
 GET /template_render                            App.TemplateRender
 
-GET /submit_article                             App.SubmitArticle
+POST /submit_article                             App.SubmitArticle
 
 # Catch all, this will route any request into the controller path
 #
