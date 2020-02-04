@@ -5,7 +5,7 @@ A full stack webapplication that enables users to make short and simple news art
 ## Dependent Technologies
 
 - go revel
-- MVC Architecture 
+- MVC Architecture
 - elastisearch (go-elastisearch)
 - MySQL
 - godep
