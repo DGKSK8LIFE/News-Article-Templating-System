@@ -17,7 +17,7 @@ A full stack webapplication that enables users to make short and simple news art
 
 ## Desired Features
 
-- Client-Side rendering
+- Client-Side rendering (eventually)
 - An Article template that has a grid for images, then allocates the rest of the space for text
 - User would upload images to the grid portion and would be able to write markdown text which could be processed on the server side and sent through the view once submitted by the user, sent through the controller, and written to the model
 - Users, after creative news pages, would submit them to the server, then they'd have their article available as a global resource within the webapp
@@ -32,3 +32,5 @@ A full stack webapplication that enables users to make short and simple news art
 ### MVC (Model View Controller)
 
 ![MVC](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/500px-MVC-Process.svg.png)
+
+
