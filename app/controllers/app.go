@@ -1,7 +1,9 @@
 package controllers
 
 import (
+	// "database/sql"
 	"github.com/revel/revel"
+	_ "github.com/go-sql-driver/mysql"
 )
 
 // Controller Instance 
@@ -15,6 +17,10 @@ func (c App) Index() revel.Result {
 }
 
 // Article Template receiver
-func (c App) Template_Render() revel.Result {
+func (c App) TemplateRender() revel.Result {
 	return c.RenderTemplate("App/Template_Render.html")
+}
+
+func (c App) SubmitArticle()  {
+
 }
