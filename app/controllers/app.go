@@ -11,16 +11,17 @@ type App struct {
 	*revel.Controller
 }
 
-// home page receiver
+// home page renderer
 func (c App) Index() revel.Result {
 	return c.RenderTemplate("App/Index.html")
 }
 
-// Article Template receiver
+// Article Template renderer
 func (c App) ArticleTemplate() revel.Result {
 	return c.RenderTemplate("App/Article.html")
 }
 
+// Article Template data receiver
 func (c App) SubmitArticle() revel.Result {
 	text := c.Params.Get("text")
 }
