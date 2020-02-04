@@ -22,7 +22,8 @@ func (c App) ArticleTemplate() revel.Result {
 }
 
 // Article Template data receiver
-func (c App) SubmitArticle() {
+func (c App) SubmitArticle() revel.Result {
 	text := c.Params.Get("text")
 	print(text)
+	return c.RenderText("test")
 }
