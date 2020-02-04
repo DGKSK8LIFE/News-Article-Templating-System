@@ -21,7 +21,7 @@ func (c App) ArticleTemplate() revel.Result {
 	return c.RenderTemplate("App/Article.html")
 }
 
-// Article Template data receiver
+// Article Template data receiver; going to implement model interaction soon
 func (c App) SubmitArticle() revel.Result {
 	text := c.Params.Get("text")
 	print(text)
