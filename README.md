@@ -1,6 +1,6 @@
 # News-Article-Templating-System
 
-A full stack webapplication that enables users to make short and simple news articles and provides a means of searching through every single submitted article; essentially a stripped-down, mono-functional CMS (Content Management System). 
+A full stack webapplication that enables users to make short and simple news articles and provides a means of searching through every single submitted article; essentially a stripped-down, mono-functional CMS (Content Management System).
 
 ## Dependent Technologies
 
@@ -11,7 +11,7 @@ A full stack webapplication that enables users to make short and simple news art
 - Godep
 - Redis (maybe)
 - gRPC (eventually)
-- Html Templates (engine tbd)
+- Html Templates (engine tbd; either mustache or go html templates)
 - ReactJS (eventually)
 - Markdown Engine (Eventually)
 
