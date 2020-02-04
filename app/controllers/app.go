@@ -17,7 +17,7 @@ func (c App) Index() revel.Result {
 }
 
 // Article Template receiver
-func (c App) TemplateRender() revel.Result {
+func (c App) ArticleTemplate() revel.Result {
 	return c.RenderTemplate("App/Template_Render.html")
 }
 
