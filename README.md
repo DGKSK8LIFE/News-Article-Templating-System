@@ -1,43 +1,36 @@
-# Welcome to Revel
+# News-Article-Templating-System
 
-A high-productivity web framework for the [Go language](http://www.golang.org/).
+A full stack webapplication that enables users to make short and simple news articles and provides a means of searching through every single submitted article; essentially a stripped-down, mono-functional CMS (Content Management System). 
 
+## Dependent Technologies
 
-### Start the web server:
+- go revel
+- MVC Architecture 
+- elastisearch (go-elastisearch)
+- MySQL
+- godep
+- Redis (maybe)
+- gRPC (eventually)
+- Html Templates (engine tbd)
+- ReactJS (eventually)
+- Markdown Engine (Eventually)
 
-   revel run myapp
+## Desired Features
 
-### Go to http://localhost:9000/ and you'll see:
+- Client-Side rendering
+- An Article template that has a grid for images, then allocates the rest of the space for text
+- User would upload images to the grid portion and would be able to write markdown text which could be processed on the server side and sent through the view once submitted by the user, sent through the controller, and written to the model
+- Users, after creative news pages, would submit them to the server, then they'd have their article available as a global resource within the webapp
+- Users would be able to search through all created articles (would have to implement search engine stuff like regex)
+- Database could use binary search to reduce bandwidth usage/time spent indexing the database server 
+- Eventually would make a template design/creation system for aesthetic diversity among articles
+- Would eventually implement article crawling for search engine optimization
+- Eventually, after the stable build is written and works flawlessly, integrate incremental saving and updating of elements of templating files which would be facilitated by a more dynamic design (implemented with gRPC and other tools); metadata about images that were uploaded and associated with it and their location would be written to the database as the author is creating the article and text would be saved and updated incrementally so they don’t lose any work; have local storage sync with server/db (buffered)
 
-    "It works"
+## Architecture Visualization
 
-## Code Layout
+### MVC (Model View Controller)
 
-The directory structure of a generated Revel application:
+![MVC](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/500px-MVC-Process.svg.png)
 
-    conf/             Configuration directory
-        app.conf      Main app configuration file
-        routes        Routes definition file
-
-    app/              App sources
-        init.go       Interceptor registration
-        controllers/  App controllers go here
-        views/        Templates directory
-
-    messages/         Message files
-
-    public/           Public static assets
-        css/          CSS files
-        js/           Javascript files
-        images/       Image files
-
-    tests/            Test suites
-
-
-## Help
-
-* The [Getting Started with Revel](http://revel.github.io/tutorial/gettingstarted.html).
-* The [Revel guides](http://revel.github.io/manual/index.html).
-* The [Revel sample apps](http://revel.github.io/examples/index.html).
-* The [API documentation](https://godoc.org/github.com/revel/revel).
 
