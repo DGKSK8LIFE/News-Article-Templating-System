@@ -18,12 +18,6 @@ func (t *AppTest) TestThatIndexPageWorks() {
 	t.AssertContentType("text/html; charset=utf-8")
 }
 
-func (t *AppTest) TestThatTemplate_RenderPageWork() {
-	t.Get("template_render")
-	t.AssertOk()
-	t.AssertContentType("text/html; charset=utf-8")
-}
-
 func (t *AppTest) After() {
 	println("Tear down")
 }

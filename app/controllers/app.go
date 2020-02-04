@@ -9,9 +9,9 @@ type App struct {
 }
 
 func (c App) Index() revel.Result {
-	return c.RenderTemplate("views/App/Index.html")
+	return c.RenderTemplate("App/Index.html")
 }
 
 func (c App) Template_Render() revel.Result {
-	return c.RenderTemplate("views/App/Template_Render.html")
+	return c.RenderTemplate("App/Template_Render.html")
 }
