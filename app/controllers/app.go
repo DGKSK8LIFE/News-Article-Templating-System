@@ -22,5 +22,5 @@ func (c App) ArticleTemplate() revel.Result {
 }
 
 func (c App) SubmitArticle() revel.Result {
-	return c.RenderText("test")
+	text := c.Params.Get("text")
 }
