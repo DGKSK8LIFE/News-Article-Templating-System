@@ -32,5 +32,3 @@ A full stack webapplication that enables users to make short and simple news art
 ### MVC (Model View Controller)
 
 ![MVC](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/500px-MVC-Process.svg.png)
-
-
