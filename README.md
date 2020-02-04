@@ -4,11 +4,11 @@ A full stack webapplication that enables users to make short and simple news art
 
 ## Dependent Technologies
 
-- go revel
+- Go Revel
 - MVC Architecture
-- elastisearch (go-elastisearch)
+- Elastisearch (go-elastisearch)
 - MySQL
-- godep
+- Godep
 - Redis (maybe)
 - gRPC (eventually)
 - Html Templates (engine tbd)
@@ -22,7 +22,7 @@ A full stack webapplication that enables users to make short and simple news art
 - User would upload images to the grid portion and would be able to write markdown text which could be processed on the server side and sent through the view once submitted by the user, sent through the controller, and written to the model
 - Users, after creative news pages, would submit them to the server, then they'd have their article available as a global resource within the webapp
 - Users would be able to search through all created articles (would have to implement search engine stuff like regex)
-- Database could use binary search to reduce bandwidth usage/time spent indexing the database server 
+- Database could use binary search to reduce bandwidth usage/time spent indexing the database server
 - Eventually would make a template design/creation system for aesthetic diversity among articles
 - Would eventually implement article crawling for search engine optimization
 - Eventually, after the stable build is written and works flawlessly, integrate incremental saving and updating of elements of templating files which would be facilitated by a more dynamic design (implemented with gRPC and other tools); metadata about images that were uploaded and associated with it and their location would be written to the database as the author is creating the article and text would be saved and updated incrementally so they don’t lose any work; have local storage sync with server/db (buffered)
