@@ -15,7 +15,7 @@ var (
 	BuildTime string
 
 	// SQL Article Database
-	DB *sql.db
+	DB *sql.DB
 )
 
 func InitDB() {

@@ -1,9 +1,10 @@
 package controllers
 
 import (
-	"app"
 	"fmt"
 	"log"
+
+	"github.com/News-Article-Templating-System/app"
 
 	"time"
 
