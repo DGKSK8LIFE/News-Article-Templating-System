@@ -19,6 +19,7 @@ var (
 )
 
 func InitDB() {
+	var err error
 	DB, err = sql.Open("mysql", "user:password@/articles")
 	if err != nil {
 		revel.INFO.Printf("DB Error: %s\n", err)
