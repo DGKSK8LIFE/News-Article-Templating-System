@@ -31,5 +31,5 @@ func (c App) SubmitArticle() revel.Result {
 		log.Fatalf("database error: %s\n", err)
 	}
 	defer db.Close()
-	return c.Redirect()
+	return c.Redirect(App.Index)
 }
