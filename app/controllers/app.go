@@ -1,7 +1,9 @@
 package controllers
 
 import (
-	// "database/sql"
+	"database/sql"
+	"log"
+
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
 )
@@ -23,6 +25,11 @@ func (c App) ArticleTemplate() revel.Result {
 
 // Article Template data receiver; going to implement model interaction soon
 func (c App) SubmitArticle() revel.Result {
+	db, err := sql.Open("mysql", "")
+	if err != nil {
+		log.Fatalf("database error: %s\n", err)
+	}
+	defer db.Close()
 	text := c.Params.Get("text")
 	return c.Redirect()
 }
