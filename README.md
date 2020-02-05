@@ -1,6 +1,6 @@
 # News-Article-Templating-System
 
-A full stack webapplication that enables users to make short and simple news articles and provides a means of searching through every single submitted article; essentially a stripped-down, mono-functional CMS (Content Management System).
+A full stack webapplication that enables users to make short and simple news articles and provides a means of searching through every single submitted article; essentially a stripped-down, mono-functional CMS (Content Management System) with anonymous capabilities.
 
 ## Dependent Technologies
 
