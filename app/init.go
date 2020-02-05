@@ -1,6 +1,9 @@
 package app
 
 import (
+	"database/sql"
+
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
 )
 
@@ -10,7 +13,18 @@ var (
 
 	// BuildTime revel app build-time (ldflags)
 	BuildTime string
+
+	// SQL Article Database
+	DB *sql.db
 )
+
+func InitDB() {
+	DB, err = sql.Open("mysql", "user:password@/articles")
+	if err != nil {
+		revel.INFO.Printf("DB Error: %s\n", err)
+	}
+	revel.INFO.Println("DB Connected")
+}
 
 func init() {
 	// Filters is the default set of global filters.
@@ -36,6 +50,8 @@ func init() {
 	// revel.OnAppStart(ExampleStartupScript)
 	// revel.OnAppStart(InitDB)
 	// revel.OnAppStart(FillCache)
+
+	revel.OnAppStart(InitDB)
 }
 
 // HeaderFilter adds common security headers
