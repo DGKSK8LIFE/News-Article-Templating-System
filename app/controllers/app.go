@@ -3,6 +3,9 @@ package controllers
 import (
 	"app"
 	"fmt"
+	"log"
+
+	"time"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
@@ -25,8 +28,11 @@ func (c App) ArticleTemplate() revel.Result {
 
 // Article Template data receiver; going to implement model interaction soon
 func (c App) SubmitArticle() revel.Result {
-	// text := c.Params.Get("text")
-	query := fmt.Sprintf()
-	execQuery, err := app.DB.Exec()
+	text := c.Params.Get("text")
+	query := fmt.Sprintf("INSERT INTO article (content, timestamp) VALUES (%s, %d);", text, time.UTC())
+	execQuery, err := app.DB.Exec(query)
+	if err != nil {
+		log.Fatalf("Query failed: %s\n", err)
+	}
 	return c.Redirect(App.Index)
 }
