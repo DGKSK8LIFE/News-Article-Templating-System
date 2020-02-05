@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	// "database/sql"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
 )
@@ -23,7 +22,7 @@ func (c App) ArticleTemplate() revel.Result {
 
 // Article Template data receiver; going to implement model interaction soon
 func (c App) SubmitArticle() revel.Result {
+
 	text := c.Params.Get("text")
-	print(text)
-	return c.RenderText("test")
+	return c.Redirect()
 }
