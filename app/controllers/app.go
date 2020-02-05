@@ -25,7 +25,7 @@ func (c App) ArticleTemplate() revel.Result {
 
 // Article Template data receiver; going to implement model interaction soon
 func (c App) SubmitArticle() revel.Result {
-	text := c.Params.Get("text")
+	// text := c.Params.Get("text")
 	db, err := sql.Open("mysql", "articles")
 	if err != nil {
 		log.Fatalf("database error: %s\n", err)
