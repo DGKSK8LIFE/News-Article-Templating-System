@@ -2,8 +2,10 @@ package app
 
 import (
 	"database/sql"
+	"log"
 
 	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/lib/pq"
 	"github.com/revel/revel"
 )
 
@@ -22,9 +24,9 @@ func InitDB() {
 	var err error
 	DB, err = sql.Open("mysql", "user:password@/articles")
 	if err != nil {
-		revel.INFO.Printf("DB Error: %s\n", err)
+		log.Fatalf("DB Error: %s\n", err)
 	}
-	revel.INFO.Println("DB Connected")
+	log.Println("DB Connected")
 }
 
 func init() {
