@@ -16,12 +16,12 @@ var (
 	// BuildTime revel app build-time (ldflags)
 	BuildTime string
 
-	// SQL Article Database
 	DB *sql.DB
+
+	err error
 )
 
 func InitDB() {
-	var err error
 	DB, err = sql.Open("mysql", "user:password@/articles")
 	if err != nil {
 		log.Fatalf("DB Error: %s\n", err)
