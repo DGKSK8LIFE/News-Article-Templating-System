@@ -21,7 +21,7 @@ var (
 )
 
 func InitDB() {
-	DB, err = sql.Open("mysql", "tarekali:root@/articles")
+	DB, err = sql.Open("mysql", "username:password@/articles")
 	if err != nil {
 		log.Fatalf("DB Error: %s\n", err)
 	}
