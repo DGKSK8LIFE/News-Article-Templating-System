@@ -18,18 +18,6 @@
   version = "v2.15"
 
 [[projects]]
-  digest = "1:b424ab60bdff8b8899fa0b27c9b35083f2607fbbaa7b6430617c53ca4501d286"
-  name = "github.com/lib/pq"
-  packages = [
-    ".",
-    "oid",
-    "scram",
-  ]
-  pruneopts = ""
-  revision = "99274577be97ac9b1d95a2d61d566dc9b7cc6a54"
-  version = "v1.3.0"
-
-[[projects]]
   digest = "1:9b58ad18b38cf0d44b1d006fce319e45f200eafa406fe7f65fe0d0194b9f7a9f"
   name = "github.com/mattn/go-colorable"
   packages = ["."]
@@ -158,7 +146,6 @@
   analyzer-version = 1
   input-imports = [
     "github.com/go-sql-driver/mysql",
-    "github.com/lib/pq",
     "github.com/revel/modules/static/app/controllers",
     "github.com/revel/modules/testrunner/app",
     "github.com/revel/modules/testrunner/app/controllers",

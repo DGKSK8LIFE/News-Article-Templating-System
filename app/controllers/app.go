@@ -1,10 +1,9 @@
 package controllers
 
 import (
+	"News-Article-Templating-System-Revel-ok/app"
 	"fmt"
 	"log"
-
-	"github.com/News-Article-Templating-System/app"
 
 	"time"
 
