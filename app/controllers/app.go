@@ -29,7 +29,7 @@ func (c App) ArticleTemplate() revel.Result {
 // Article Template data receiver; going to implement model interaction soon
 func (c App) SubmitArticle() revel.Result {
 	text := c.Params.Get("text")
-	approxLogTime := time.UTC()
+	approxLogTime := time.UTC().String()
 	query := fmt.Sprintf("INSERT INTO article (content, timestamp) VALUES (%s, %v);", text, approxLogTime)
 	execQuery, err := app.DB.Exec(query)
 	if err != nil {
