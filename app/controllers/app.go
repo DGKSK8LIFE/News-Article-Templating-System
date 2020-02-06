@@ -30,7 +30,7 @@ func (c App) ArticleTemplate() revel.Result {
 func (c App) SubmitArticle() revel.Result {
 	text := c.Params.Get("text")
 	approxLogTime := time.UTC()
-	query := fmt.Sprintf("INSERT INTO article (content, timestamp) VALUES (%s, %d);", text, approxLogTime)
+	query := fmt.Sprintf("INSERT INTO article (content, timestamp) VALUES (%s, %v);", text, approxLogTime)
 	execQuery, err := app.DB.Exec(query)
 	if err != nil {
 		log.Fatalf("Query failed: %s\n", err)
