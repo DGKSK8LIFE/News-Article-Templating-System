@@ -24,6 +24,12 @@ func (t *AppTest) TestThatArticleTemplateWorks() {
 	t.AssertContentType("text/html; charset=utf-8")
 }
 
+func (t *AppTest) TestThatSubmitArticleWorks() {
+	t.Get("/submit_article")
+	t.AssertOk()
+	t.AssertContentType("text/html; charset=utf-8")
+}
+
 func (t *AppTest) After() {
 	println("Tear down")
 }
