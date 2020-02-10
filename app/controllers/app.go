@@ -9,6 +9,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
+	"github.com/hoisie/mustache"
 )
 
 // Controller Instance
