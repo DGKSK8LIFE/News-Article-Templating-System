@@ -29,7 +29,7 @@ A full stack webapplication that enables users to make short and simple news art
 
 ## Task Checklist
 
-[CheckList](checklist.md)
+[Checklist](checklist.md)
 ## Architecture Visualization
 
 ### MVC (Model View Controller)
