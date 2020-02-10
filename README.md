@@ -27,6 +27,9 @@ A full stack webapplication that enables users to make short and simple news art
 - Would eventually implement article crawling for search engine optimization
 - Eventually, after the stable build is written and works flawlessly, integrate incremental saving and updating of elements of templating files which would be facilitated by a more dynamic design (implemented with gRPC and other tools); metadata about images that were uploaded and associated with it and their location would be written to the database as the author is creating the article and text would be saved and updated incrementally so they don’t lose any work; have local storage sync with server/db (buffered)
 
+## Task Checklist
+
+[CheckList](checklist.md)
 ## Architecture Visualization
 
 ### MVC (Model View Controller)
