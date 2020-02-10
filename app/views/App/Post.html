@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/css/style.css">
+    <title>News Article Templating System</title>
+</head>
+
+<body>
+    <h1>{{ title }}</h1>
+    <form action="/submit_article" method="POST">
+        <input type="text" maxlength="30" name="title" required="required">
+        <br>
+        <textarea cols="50" rows="10" name="text" required></textarea>
+        <br>
+        <input type="submit" value="Create">
+    </form>
+</body>
+
+</html
