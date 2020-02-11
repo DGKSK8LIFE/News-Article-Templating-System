@@ -11,7 +11,7 @@ A full stack webapplication that enables users to make short and simple news art
 - Godep
 - Redis (maybe)
 - gRPC (potentially)
-- HTML Templates (engine tbd; either mustache or go html templates)
+- Go HTML Templates 
 - ReactJS (eventually)
 - Markdown Engine (Eventually)
 
