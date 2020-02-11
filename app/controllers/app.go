@@ -9,7 +9,6 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
-	"github.com/hoisie/mustache"
 )
 
 // Controller Instance
@@ -20,6 +19,11 @@ type App struct {
 // home page renderer
 func (c App) Index() revel.Result {
 	return c.RenderTemplate("App/Index.html")
+}
+
+// Template Aggregator and data inserter
+func (c App) AgInserter() revel.Result {
+	return c.RenderTemplate()
 }
 
 // Article Template renderer
