@@ -33,6 +33,7 @@ func (c App) PostToArticle(id int, title string) revel.Result {
 	if err != nil {
 		log.Fatalf("Query failed: %s\n", err)
 	}
+	return c.RenderTemplate("App/Post.html", title=title, text=result)
 }
 
 // Article Template renderer
