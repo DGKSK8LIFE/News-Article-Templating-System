@@ -4,7 +4,6 @@ import (
 	"News-Article-Templating-System-Revel-ok/app"
 	"fmt"
 	"log"
-
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"

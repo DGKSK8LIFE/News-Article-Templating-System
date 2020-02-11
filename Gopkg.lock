@@ -10,14 +10,6 @@
   version = "v1.5.0"
 
 [[projects]]
-  digest = "1:0f792c03f56882240aa4886e731d9c569e3c53ed8d79bef4df3e930b2ad3b3a3"
-  name = "github.com/hoisie/mustache"
-  packages = ["."]
-  pruneopts = ""
-  revision = "6dfe7cd5e765063d31ecdfcda4c6568d7cdd39b6"
-  version = "0.0.1"
-
-[[projects]]
   digest = "1:a970a0ada840519f69920ea4ce6be93ef6bbe04843730983ba699c06021fd789"
   name = "github.com/inconshreveable/log15"
   packages = ["term"]
@@ -154,7 +146,6 @@
   analyzer-version = 1
   input-imports = [
     "github.com/go-sql-driver/mysql",
-    "github.com/hoisie/mustache",
     "github.com/revel/modules/static/app/controllers",
     "github.com/revel/modules/testrunner/app",
     "github.com/revel/modules/testrunner/app/controllers",
