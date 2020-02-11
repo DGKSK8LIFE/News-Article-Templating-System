@@ -36,10 +36,10 @@ func (c App) PostToArticle(id int, title string) revel.Result {
 	}
 	fieldData := struct {
 		title string
-		text  string
+		text  interface{}
 	}{
 		title: title,
-		text:  string(result),
+		text:  result,
 	}
 	return c.RenderTemplate("App/Post.html", fieldData)
 }
