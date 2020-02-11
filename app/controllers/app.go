@@ -27,7 +27,7 @@ func (c App) SearchQuery() revel.Result {
 }
 
 // Handles Post Request To Desired Article
-func (c App) PostToArticle() revel.Result {
+func (c App) PostToArticle(id int, title string) revel.Result {
 
 }
 
