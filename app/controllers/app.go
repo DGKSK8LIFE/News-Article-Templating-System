@@ -39,7 +39,7 @@ func (c App) PostToArticle(id int, title string) revel.Result {
 		text  string
 	}{
 		title: title,
-		text:  result,
+		text:  string(result),
 	}
 	return c.RenderTemplate("App/Post.html", fieldData)
 }
