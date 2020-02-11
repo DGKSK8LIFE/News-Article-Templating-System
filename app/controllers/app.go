@@ -21,9 +21,14 @@ func (c App) Index() revel.Result {
 	return c.RenderTemplate("App/Index.html")
 }
 
-// Template Aggregator and data inserter
-func (c App) AgInserter() revel.Result {
-	return c.RenderTemplate()
+// Parses SearchPatterns and Returns Database Results Accordingly
+func (c App) SearchQuery() revel.Result {
+
+}
+
+// Handles Post Request To Desired Article
+func (c App) PostToArticle() revel.Result {
+
 }
 
 // Article Template renderer
