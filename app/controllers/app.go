@@ -41,7 +41,7 @@ func (c App) PostToArticle(id int, title string) revel.Result {
 		title: title,
 		text:  result,
 	}
-	return c.RenderTemplate("App/Post.html", fieldData)
+	return c.Execute("App/Post.html", fieldData)
 }
 
 // Article Template renderer
