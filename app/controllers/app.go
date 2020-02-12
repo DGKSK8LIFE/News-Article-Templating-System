@@ -34,16 +34,9 @@ func (c App) PostToArticle(id int, title string) revel.Result {
 	if err != nil {
 		log.Fatalf("Query failed: %s\n", err)
 	}
-	fieldData := struct {
-		title string
-		text  interface{}
-	}{
-		title: title,
-		text:  result,
-	}
-	c.ViewArgs['title'] = fieldData.title
-	c.ViewArgs['text'] = fieldData.text
-	return c.Execute("App/Post.html")
+	c.ViewArgs["title"] = title
+	c.ViewArgs["text"] = result
+	return c.ExecuteTemplate("App/Post.html")
 }
 
 // Article Template renderer
