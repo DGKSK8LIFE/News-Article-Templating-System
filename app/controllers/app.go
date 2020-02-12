@@ -36,7 +36,7 @@ func (c App) PostToArticle(id int, title string) revel.Result {
 	}
 	c.ViewArgs["title"] = title
 	c.ViewArgs["text"] = result
-	return c.ExecuteTemplate("App/Post.html")
+	return c.RenderTemplate("App/Post.html")
 }
 
 // Article Template renderer
