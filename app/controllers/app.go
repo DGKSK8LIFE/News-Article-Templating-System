@@ -20,13 +20,6 @@ func (c App) Index() revel.Result {
 	return c.RenderTemplate("App/Index.html")
 }
 
-/*
-// Parses SearchPatterns and Returns Database Results Accordingly
-func (c App) SearchQuery() revel.Result {
-
-}
-*/
-
 // Handles Post Request To Desired Article
 func (c App) PostToArticle(id int, title string) revel.Result {
 	query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
