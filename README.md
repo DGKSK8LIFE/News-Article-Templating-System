@@ -1,6 +1,6 @@
 # News-Article-Templating-System
 
-A full stack Go Revel webapplication that enables users to create short and simple news articles and provides a means of searching through every single submitted article; essentially a stripped-down, mono-functional CMS (Content Management System) with anonymous capabilities.
+A full stack Go Revel webapplication that enables users to create short and simple news articles and provides a means of searching through every single submitted article; essentially a stripped-down, mono-functional CMS (Content Management System).
 
 ## Dependent Technologies
 
