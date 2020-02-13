@@ -13,7 +13,7 @@ A full stack webapplication that enables users to make short and simple news art
 - gRPC (potentially)
 - Go HTML Templates 
 - ReactJS (eventually)
-- Markdown Engine (Eventually)
+- Markdown Engine for article formatting (Eventually)
 
 ## Desired Features
 
