@@ -31,6 +31,7 @@ A full stack Go Revel webapplication that enables users to create short and simp
 ## Task Checklist
 
 [Checklist](checklist.md)
+
 ## Architecture Visualization
 
 ### MVC (Model View Controller)
