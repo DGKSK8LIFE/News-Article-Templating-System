@@ -6,3 +6,6 @@
 2. Prototype user interface works.
 3. Templates, once created, have established routes with this form: /id/title.
 
+## TODO
+Fix all bugs that linger in completed tasks (IE: github issue).
+
