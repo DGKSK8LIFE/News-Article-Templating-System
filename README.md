@@ -4,7 +4,8 @@ A full stack go revel webapplication that enables users to make short and simple
 
 ## Dependent Technologies
 
-- Go Revel
+- Go Revel 
+![revel](https://avatars0.githubusercontent.com/u/6631594?s=200&v=4)
 - MVC Architecture
 - Elastisearch (go-elastisearch)
 - MySQL
