@@ -8,5 +8,5 @@
 
 ## TODO
 
-Fix all bugs that linger in completed tasks (IE: github issue).
+Fix all bugs that linger in completed tasks (IE: Github issues).
 
