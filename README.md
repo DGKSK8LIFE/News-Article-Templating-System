@@ -8,7 +8,7 @@ A full stack webapplication that enables users to make short and simple news art
 - MVC Architecture
 - Elastisearch (go-elastisearch)
 - MySQL
-- Godep
+- Godep for dependency management
 - Redis (maybe)
 - gRPC (potentially)
 - Go HTML Templates 
