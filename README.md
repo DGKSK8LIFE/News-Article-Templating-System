@@ -1,4 +1,4 @@
-![revel gopher image (logo)](https://avatars0.githubusercontent.com/u/6631594?s=200&v=4)
+![revel gopher image (logo)](https://revel.github.io/img/RevelWhiteLines.png)
 # News-Article-Templating-System 
 
 A full stack Go Revel webapplication that enables users to create short and simple news articles and provides a means of searching through every single submitted article; essentially a stripped-down, mono-functional CMS (Content Management System).
