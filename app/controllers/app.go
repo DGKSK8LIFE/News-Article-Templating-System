@@ -6,6 +6,8 @@ import (
 	"log"
 	"time"
 
+	"database/sql"
+
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
 )
