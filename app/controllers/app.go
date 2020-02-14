@@ -23,9 +23,11 @@ func (c App) Index() revel.Result {
 // Handles Post Request To Desired Article
 func (c App) PostToArticle(id int, title string) revel.Result {
 	query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
-	result, err := app.DB.Query(query)
-	if err != nil {
+	result, err := app.DB.Query(query).Scan()
+	if err != nil && err != sql.ErrorNoRows {
 		log.Fatalf("Query failed: %s\n", err)
+	} else if err == sql.ErrorNoRows {
+		return
 	}
 	c.ViewArgs["title"] = title
 	c.ViewArgs["text"] = result
