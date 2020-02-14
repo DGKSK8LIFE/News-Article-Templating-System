@@ -38,6 +38,6 @@ A full stack Go Revel webapplication that enables users to create short and simp
 
 ![MVC](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/500px-MVC-Process.svg.png)
 
-### MySQL (SQL server)
+### MySQL (SQL server IE: data store that serves as model)
 
 ![MYSQL LOGO](https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png)
