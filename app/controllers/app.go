@@ -26,7 +26,7 @@ func (c App) Index() revel.Result {
 func (c App) PostToArticle(id int, title string) revel.Result {
 	if exists := postExists(id); true {
 		query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
-		result, err := db.QueryRow(query).Scan(&content)
+		result, err := DB.QueryRow(query).Scan(&content)
 		if err != nil {
 			log.Fatalf("Query error: %s\n", err)
 		}
