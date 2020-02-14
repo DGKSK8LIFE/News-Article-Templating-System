@@ -40,3 +40,4 @@ A full stack Go Revel webapplication that enables users to create short and simp
 
 ### MySQL
 
+![MYSQL LOGO](https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png)
