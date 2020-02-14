@@ -38,4 +38,5 @@ A full stack Go Revel webapplication that enables users to create short and simp
 
 ![MVC](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/500px-MVC-Process.svg.png)
 
+### MySQL
 
