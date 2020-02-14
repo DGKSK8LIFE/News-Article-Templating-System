@@ -24,18 +24,16 @@ func (c App) Index() revel.Result {
 
 // Handles Post Request To Desired Article
 func (c App) PostToArticle(id int, title string) revel.Result {
-
-	query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
-
-	if err != nil && err != sql.ErrNoRows {
-		log.Fatalf("Query failed: %s\n", err)
-	} else if err == sql.ErrNoRows {
+	if exists := postExists(id); true {
+		query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
+		c.ViewArgs["title"] = title
+		c.ViewArgs["text"] = result
+		return c.RenderTemplate("App/Post.html")
+	} else if exists == false {
 		c.Response.Status = 404
 		return c.Render()
 	}
-	c.ViewArgs["title"] = title
-	c.ViewArgs["text"] = result
-	return c.RenderTemplate("App/Post.html")
+
 }
 
 // Article Template renderer
