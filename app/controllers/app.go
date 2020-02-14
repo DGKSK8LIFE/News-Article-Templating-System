@@ -28,7 +28,7 @@ func (c App) PostToArticle(id int, title string) revel.Result {
 	result, err := app.DB.Query(query)
 	if err != nil && err != sql.ErrNoRows {
 		log.Fatalf("Query failed: %s\n", err)
-	} else if err == sql.ErrorNoRows {
+	} else if err == sql.ErrNoRows {
 		return
 	}
 	c.ViewArgs["title"] = title
