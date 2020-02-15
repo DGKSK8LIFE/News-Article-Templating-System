@@ -36,6 +36,7 @@ func (c App) PostToArticle(id int, title string) revel.Result {
 		c.Response.Status = 404
 		return c.Render()
 	}
+	return c.Redirect("App/Article.html")
 
 }
 
