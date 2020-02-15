@@ -2,11 +2,10 @@ package controllers
 
 import (
 	"News-Article-Templating-System-Revel-ok/app"
+	"database/sql"
 	"fmt"
 	"log"
 	"time"
-
-	"database/sql"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
@@ -26,7 +25,7 @@ func (c App) Index() revel.Result {
 func (c App) PostToArticle(id int, title string) revel.Result {
 	if exists := postExists(id); true {
 		query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
-		result, err := app.DB.QueryRow(query).Scan()
+		result, err := app.DB.Query(query)
 		if err != nil {
 			log.Fatalf("Query error: %s\n", err)
 		}
