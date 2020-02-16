@@ -7,7 +7,7 @@ A full stack Go Revel webapplication that enables users to create short and simp
 
 - Go Revel 
 - MVC Architecture
-- Elastisearch (go-elastisearch)
+- Elastisearch (go-elastisearch) (potentially) 
 - MySQL
 - Godep for dependency management
 - Redis (will only be used if live template saving is going to be implemented)
