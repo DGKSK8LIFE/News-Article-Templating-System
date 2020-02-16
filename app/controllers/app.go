@@ -58,7 +58,7 @@ func (c App) SubmitArticle() revel.Result {
 
 func postExists(id int) bool {
 	var exists bool
-	query := fmt.Sprintf("SELECT * FROM article WHERE id='%v';", id, title)
+	query := fmt.Sprintf("SELECT * FROM article WHERE id='%v';", id)
 	if err := app.DB.QueryRow(query).Scan(&id); err != nil && err != sql.ErrNoRows {
 		log.Fatalf("database error: %s\n", err)
 	} else if err == sql.ErrNoRows {
