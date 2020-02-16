@@ -14,7 +14,7 @@ A full stack Go Revel webapplication that enables users to create short and simp
 - Go HTML Templates 
 - ReactJS (eventually)
 - Markdown Engine for article formatting (eventually)
-- JSON (for RESTful API)
+- JSON (RESTful API)
 
 ## Desired Features
 
