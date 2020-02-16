@@ -11,7 +11,6 @@ A full stack Go Revel webapplication that enables users to create short and simp
 - MySQL
 - Godep for dependency management
 - Redis (will only be used if live template saving is going to be implemented)
-- gRPC (potentially)
 - Go HTML Templates 
 - ReactJS (eventually)
 - Markdown Engine for article formatting (Eventually)
