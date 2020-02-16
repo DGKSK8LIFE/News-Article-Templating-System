@@ -11,7 +11,7 @@ import (
 	"github.com/revel/revel"
 )
 
-// Controller Instance
+// Controller struct
 type App struct {
 	*revel.Controller
 }
