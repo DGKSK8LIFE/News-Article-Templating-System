@@ -16,6 +16,8 @@ type App struct {
 	*revel.Controller
 }
 
+// RESTful API POST struct
+
 // home page renderer
 func (c App) Index() revel.Result {
 	return c.RenderTemplate("App/Index.html")
