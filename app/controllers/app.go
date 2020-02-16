@@ -48,7 +48,7 @@ func (c App) ArticleTemplate() revel.Result {
 // Article Template data receiver; going to implement model interaction soon
 func (c App) SubmitArticle() revel.Result {
 	content := []string{c.Params.Get("text"), c.Params.Get("title")}
-	query := fmt.Sprintf("INSERT INTO article (content, timestamp, title) VALUES ('%s', '%v', '%v');", content[0], time.Now().UTC().String(), content[1])
+	query := fmt.Sprintf("INSERT INTO article (content, timestamp, title) VALUES ('%v', '%v', '%v');", content[0], time.Now().UTC().String(), content[1])
 	_, err := app.DB.Exec(query)
 	if err != nil {
 		log.Fatalf("Query failed: %s\n", err)
