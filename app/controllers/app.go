@@ -23,6 +23,10 @@ func (c App) Index() revel.Result {
 	return c.RenderTemplate("App/Index.html")
 }
 
+func (c App) ServeResults(search string) revel.Result {
+	return c.Render()
+}
+
 // Handles Post Request To Desired Article
 func (c App) PostToArticle(id int, title string) revel.Result {
 	if exists := postExists(id); true {
