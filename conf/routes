@@ -19,7 +19,7 @@ GET /article_template                            App.ArticleTemplate
 
 POST /submit_article                             App.SubmitArticle
 
-# GET /:searchquery                                App.SearchQuery
+GET /search/:search                              App.ServeResults
 
 GET /:id/:title 				 App.PostToArticle
 # Catch all, this will route any request into the controller path
