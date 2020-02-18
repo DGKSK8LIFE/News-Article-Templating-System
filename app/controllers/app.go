@@ -26,6 +26,7 @@ func (c App) Index() revel.Result {
 	return c.RenderTemplate("App/Index.html")
 }
 
+// will use this to query the database with a wildcard query and then (via frontend gohtml templates), will iterate over results
 func (c App) ServeResults(search string) revel.Result {
 	return c.Render()
 }
@@ -65,6 +66,7 @@ func (c App) SubmitArticle() revel.Result {
 	return c.Redirect(App.Index)
 }
 
+// checks whether a post exists; broken atm
 func postExists(id int) bool {
 	var exists bool
 	query := fmt.Sprintf("SELECT * FROM article WHERE id='%v';", id)
