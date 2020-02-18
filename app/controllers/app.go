@@ -18,7 +18,7 @@ type App struct {
 
 // RESTful API POST struct
 type Post struct {
-	// will be redundant until I start work on the API	
+	// will be redundant until I start work on the API
 }
 
 // home page renderer
