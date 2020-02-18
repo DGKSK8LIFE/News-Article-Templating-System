@@ -17,6 +17,9 @@ type App struct {
 }
 
 // RESTful API POST struct
+type Post struct {
+	// will be redundant until I start work on the API	
+}
 
 // home page renderer
 func (c App) Index() revel.Result {
