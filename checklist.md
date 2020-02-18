@@ -11,5 +11,5 @@
 
 Fix all bugs that linger in completed tasks (IE: Github issues).
 Attain eventual goals (contained in README).
-Remove Items from Gitignore so that the project's source code is 100% transparent.
+Remove Items from `.gitignore` so that the project's source code is 100% transparent.
 
