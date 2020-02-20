@@ -18,8 +18,10 @@ type App struct {
 
 // RESTful API POST struct (will be redundant until I start work on the API)
 type Post struct {
-	//
-
+	Content   string
+	Timestamp string
+	Title     string
+	id        int
 }
 
 // home page renderer
