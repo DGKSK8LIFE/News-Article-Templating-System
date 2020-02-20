@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"News-Article-Templating-System-Revel-ok/app"
-	"database/sql"
+	"github.com/jmoiron/sqlx"
 	"fmt"
 	"log"
 	"time"
