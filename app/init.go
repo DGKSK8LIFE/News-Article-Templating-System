@@ -1,7 +1,6 @@
 package app
 
 import (
-	"database/sql"
 	"log"
 
 	"github.com/jmoiron/sqlx"
@@ -17,7 +16,7 @@ var (
 	// BuildTime revel app build-time (ldflags)
 	BuildTime string
 
-	DB *sql.DB
+	DB *sqlx.DB
 
 	err error
 )
