@@ -10,7 +10,7 @@
 
 ## TODO
 
-1. Fix all bugs that linger in completed tasks (IE: Github issues).
+1. Fix all bugs that linger in completed tasks (IE: Github issues)
 2. Attain eventual goals (contained in README).
 
 
