@@ -4,6 +4,8 @@ import (
 	"database/sql"
 	"log"
 
+	"github.com/jmoiron/sqlx"
+
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
 )
@@ -21,7 +23,7 @@ var (
 )
 
 func InitDB() {
-	DB, err = sql.Open("mysql", "tarekali@tcp(localhost:3306)/articles")
+	DB, err = sqlx.Open("mysql", "tarekali@tcp(localhost:3306)/articles")
 	if err != nil {
 		log.Fatalf("DB Error: %s\n", err)
 	}
