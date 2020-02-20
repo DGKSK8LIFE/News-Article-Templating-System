@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"News-Article-Templating-System-Revel-ok/app"
-	"github.com/jmoiron/sqlx"
+	"database/sql"
 	"fmt"
 	"log"
 	"time"
@@ -16,9 +16,10 @@ type App struct {
 	*revel.Controller
 }
 
-// RESTful API POST struct
+// RESTful API POST struct (will be redundant until I start work on the API)
 type Post struct {
-	// will be redundant until I start work on the API
+	//
+
 }
 
 // home page renderer
