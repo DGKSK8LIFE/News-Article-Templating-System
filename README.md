@@ -19,7 +19,7 @@ A full stack Go Revel webapplication that enables users to create short and simp
 
 ## Desired Features
 
-- Client-Side rendering (eventually)
+- Client-Side rendering (potentially)
 - An Article template that has a grid for images, then allocates the rest of the space for text
 - User would upload images to the grid portion and would be able to write markdown text which could be processed on the server side and sent through the view once submitted by the user, sent through the controller, and written to the model
 - Users, after creative news pages, would submit them to the server, then they'd have their article available as a global resource within the webapp
