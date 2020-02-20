@@ -6,6 +6,7 @@
 2. Prototype user interface works.
 3. Templates, once created, have established routes with this form: /id/title.
 4. `setup.sql` script for users who want to clone and run the app
+5. Transition to `sqlx` from `database/sql`
 
 ## TODO
 
