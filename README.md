@@ -6,7 +6,8 @@ A full stack Go Revel webapplication that enables users to create short and simp
 ## Dependent Technologies
 
 - Go Revel 
-- Go sqlx 
+- Go SQL Driver
+- Go sqlx (eventually; over gosql driver)
 - MVC Architecture
 - Elastisearch (go-elastisearch) (potentially; for now can just send an SQL LIKE query) 
 - MySQL
@@ -15,7 +16,6 @@ A full stack Go Revel webapplication that enables users to create short and simp
 - Go HTML Templates 
 - ReactJS (eventually)
 - Markdown Engine for article formatting (eventually)
-- JSON (RESTful API) (eventually)
 
 ## Desired Features
 
