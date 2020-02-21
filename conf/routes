@@ -22,6 +22,8 @@ POST /submit_article                             App.SubmitArticle
 GET /search/:search                              App.ServeResults
 
 GET /:id/:title 				 App.GetArticle
+
+GET /search/:query
 # Catch all, this will route any request into the controller path
 #
 #                    **** WARNING ****
