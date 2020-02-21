@@ -6,7 +6,6 @@ import (
 	"database/sql"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/jmoiron/sqlx"
 	"github.com/revel/revel"
 )
 
@@ -17,7 +16,7 @@ var (
 	// BuildTime revel app build-time (ldflags)
 	BuildTime string
 
-	DB *sqlx.DB
+	DB *sql.DB
 
 	err error
 )
