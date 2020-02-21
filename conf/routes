@@ -23,7 +23,7 @@ GET /search/:search                              App.ServeResults
 
 GET /:id/:title 				 App.GetArticle
 
-GET /search/:query
+GET /search/:query 				 App.Query
 # Catch all, this will route any request into the controller path
 #
 #                    **** WARNING ****
