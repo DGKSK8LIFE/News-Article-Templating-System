@@ -30,7 +30,7 @@ func (c App) Index() revel.Result {
 }
 
 // will use this to query the database with a wildcard query and then (via frontend gohtml templates), will iterate over results
-func (c App) ServeResults(search string) revel.Result {
+func (c App) Query(search string) revel.Result {
 	return c.Render()
 }
 
