@@ -46,7 +46,7 @@ func (c App) GetArticle(id int, title string) revel.Result {
 		return c.Render()
 	}
 	c.ViewArgs["title"] = title
-	c.ViewArgs["text"] = result
+	c.ViewArgs["text"] = post.Content
 	return c.RenderTemplate("App/Post.html")
 }
 
