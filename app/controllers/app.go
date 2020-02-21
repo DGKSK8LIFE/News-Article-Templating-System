@@ -36,22 +36,18 @@ func (c App) ServeResults(search string) revel.Result {
 
 // Handles Post Request To Desired Article
 func (c App) GetArticle(id int, title string) revel.Result {
-	if exists := postExists(id); true {
-		post := Post{}
-		query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
-		result, err := app.DB.QueryRow(query).Scan(&post.id, &post.title)
-		if err != nil {
-			log.Fatalf("Query error: %s\n", err)
-		}
-		c.ViewArgs["title"] = title
-		c.ViewArgs["text"] = result
-		return c.RenderTemplate("App/Post.html")
-	} else if exists == false {
+	post := Post{}
+	query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
+	result, err := app.DB.QueryRow(query).Scan(&post.id, &post.title)
+	if err != nil; err != sql.ErrNoRows {
+		log.Fatalf("Query error: %s\n", err)
+	} else if err == sql.ErrNoRows {
 		c.Response.Status = 404
 		return c.Render()
 	}
-	return c.Redirect("App/Article.html")
-
+	c.ViewArgs["title"] = title
+	c.ViewArgs["text"] = result
+	return c.RenderTemplate("App/Post.html")
 }
 
 // Article Template renderer
