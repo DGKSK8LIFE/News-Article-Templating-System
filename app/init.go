@@ -3,9 +3,10 @@ package app
 import (
 	"log"
 
-	"github.com/jmoiron/sqlx"
+	"database/sql"
 
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/jmoiron/sqlx"
 	"github.com/revel/revel"
 )
 
@@ -22,7 +23,7 @@ var (
 )
 
 func InitDB() {
-	DB, err = sqlx.Open("mysql", "tarekali@tcp(localhost:3306)/articles")
+	DB, err = sql.Open("mysql", "tarekali@tcp(localhost:3306)/articles")
 	if err != nil {
 		log.Fatalf("DB Error: %s\n", err)
 	}
