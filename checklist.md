@@ -14,6 +14,7 @@
 1. Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Implement working search engine
  - Implement working template preview hyperlinks
+ - Get stylesheet to work in Post.html
 2. Attain eventual goals (contained in README).
 
 
