@@ -18,10 +18,10 @@ type App struct {
 
 // RESTful API POST struct (will be redundant until I start work on the API)
 type Post struct {
-	content   string
-	timestamp string
-	title     string
-	id        int
+	Content   string
+	Timestamp string
+	Title     string
+	Id        int
 }
 
 // home page renderer
@@ -38,7 +38,7 @@ func (c App) ServeResults(search string) revel.Result {
 func (c App) GetArticle(id int, title string) revel.Result {
 	post := Post{}
 	query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
-	result, err := app.DB.QueryRow(query).Scan(&post.id, &post.title)
+	result, err := app.DB.QueryRow(query).Scan(&post.Id, &post.Title)
 	if err != nil; err != sql.ErrNoRows {
 		log.Fatalf("Query error: %s\n", err)
 	} else if err == sql.ErrNoRows {
