@@ -23,7 +23,7 @@ A full stack Go Revel webapplication that enables users to create short and simp
 - An Article template that has a grid for images, then allocates the rest of the space for text
 - User would upload images to the grid portion and would be able to write markdown text which could be processed on the server side and sent through the view once submitted by the user, sent through the controller, and written to the model
 - Users, after creative news pages, would submit them to the server, then they'd have their article available as a path with the syntax: `:id/:title` 
-- Users would be able to search through all created articles (would have to implement search engine stuff like regex)
+- Users would be able to search through all created articles (Can use an sql Like statement for now, then if I want better search results and database scanning, elastisearch)
 - Database could use binary search to reduce bandwidth usage/time spent indexing the database server 
 - Eventually would make a template design/creation system for aesthetic diversity among articles
 - Would eventually implement article crawling for search engine optimization (potentially)
