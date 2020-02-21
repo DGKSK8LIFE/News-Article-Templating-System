@@ -37,6 +37,7 @@ func (c App) ServeResults(search string) revel.Result {
 // Handles Post Request To Desired Article
 func (c App) GetArticle(id int, title string) revel.Result {
 	if exists := postExists(id); true {
+		post := Post{}
 		query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
 		result, err := app.DB.Query(query)
 		if err != nil {
