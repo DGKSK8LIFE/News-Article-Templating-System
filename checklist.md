@@ -11,7 +11,7 @@
 
 ## TODO
 
-1. Fix all bugs that linger in completed tasks (IE: Github issues)
+1. Fix all bugs that linger in uncompleted tasks sections (IE: Github issues)
  - Implement working search engine
  - Implement working template preview hyperlinks
 2. Attain eventual goals (contained in README).
