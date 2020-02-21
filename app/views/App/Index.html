@@ -10,8 +10,8 @@
 </head>
 
 <body>
-  <form action="/search/:query">
-    <input type="text" placeholder="Search for an article by title">
+	<form action="/search/{search}">
+    <input type="text" placeholder="Search for an article by title" name="search">
     <input type="submit" value="Search">
   </form>
   <a href="/article_template">
