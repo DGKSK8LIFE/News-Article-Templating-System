@@ -38,7 +38,7 @@ func (c App) ServeResults(search string) revel.Result {
 func (c App) GetArticle(id int, title string) revel.Result {
 	post := Post{}
 	query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
-	result, err := app.DB.QueryRow(query).Scan(&post.Content)
+	err := app.DB.QueryRow(query).Scan(&post.Content)
 	if err != nil; err != sql.ErrNoRows {
 		log.Fatalf("Query error: %s\n", err)
 	} else if err == sql.ErrNoRows {
