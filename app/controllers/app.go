@@ -65,17 +65,3 @@ func (c App) SubmitArticle() revel.Result {
 	}
 	return c.Redirect(App.Index)
 }
-
-// checks whether a post exists; broken atm
-func postExists(id int) bool {
-	var exists bool
-	query := fmt.Sprintf("SELECT * FROM article WHERE id='%v';", id)
-	if err := app.DB.QueryRow(query).Scan(&id); err != nil && err != sql.ErrNoRows {
-		log.Fatalf("database error: %s\n", err)
-	} else if err == sql.ErrNoRows {
-		exists = false
-	} else {
-		exists = true
-	}
-	return exists
-}
