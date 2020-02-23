@@ -16,8 +16,8 @@ type App struct {
 	*revel.Controller
 }
 
-// RESTful API POST struct
-type Post struct {
+// RESTful API Article struct
+type Article struct {
 	Content   string
 	Timestamp string
 	Title     string
@@ -31,25 +31,25 @@ func (c App) Index() revel.Result {
 
 // will use this to query the database with a wildcard query and then (via frontend gohtml templates), will iterate over results
 func (c App) Search(query string) revel.Result {
-	posts := Post{}
+	articles := Article{}
 	wildcardQuery := fmt.Sprintf("SELECT title, content FROM article WHERE title LIKE %'%v'%", query)
-	err := app.DB.QueryRow(wildcardQuery).Scan(&posts.Title, &posts.Content)
+	err := app.DB.QueryRow(wildcardQuery).Scan(&articles.Title, &articles.Content)
 	if err == sql.ErrNoRows {
 		c.ViewArgs["message"] = "No matching results"
 		return c.RenderTemplate("App/SearchResults.html")
 	}
 	message := fmt.Sprintf("Results for search: %s\n", query)
 	c.ViewArgs["message"] = message
-	c.ViewArgs["articles"] = posts
+	c.ViewArgs["articles"] = articles
 	return c.RenderTemplate("App/SearchResults.html")
 
 }
 
 // Handles Post Request To Desired Article
 func (c App) GetArticle(id int, title string) revel.Result {
-	post := Post{}
+	article := Article{}
 	query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
-	err := app.DB.QueryRow(query).Scan(&post.Content)
+	err := app.DB.QueryRow(query).Scan(&article.Content)
 	if err != sql.ErrNoRows {
 		fmt.Println("database nil err?")
 	} else if err == sql.ErrNoRows {
@@ -57,7 +57,7 @@ func (c App) GetArticle(id int, title string) revel.Result {
 		return c.Render()
 	}
 	c.ViewArgs["title"] = title
-	c.ViewArgs["text"] = post.Content
+	c.ViewArgs["text"] = article.Content
 	return c.RenderTemplate("App/Post.html")
 }
 
