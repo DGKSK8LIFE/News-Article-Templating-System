@@ -38,7 +38,7 @@ func (c App) Search(query string) revel.Result {
 		c.ViewArgs["message"] = "No matching results"
 		return c.RenderTemplate("App/SearchResults.html")
 	}
-	message := fmt.Sprintf("Results for search %s\n", query)
+	message := fmt.Sprintf("Results for search: %s\n", query)
 	c.ViewArgs["message"] = message
 	c.ViewArgs["articles"] = posts
 	return c.RenderTemplate("App/SearchResults.html")
