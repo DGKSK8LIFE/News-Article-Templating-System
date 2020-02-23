@@ -13,7 +13,9 @@
     <h1>{{ .message }}</h1>
     <br>
     {{ range .articles }} 
-
+	<hr>
+		{{ template "Post.html" }} 
+	</hr>
     {{ end }}
 </body>
 
