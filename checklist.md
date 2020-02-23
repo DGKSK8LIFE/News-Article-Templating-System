@@ -15,6 +15,6 @@
  - Implement working search engine
  - Implement working template preview hyperlinks
  - Get stylesheet to work in Post.html
-2. Attain eventual goals (contained in README).
+ - Attain eventual goals (contained in README).
 
 
