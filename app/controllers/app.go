@@ -36,7 +36,7 @@ func (c App) Search(query string) revel.Result {
 	err := app.DB.QueryRow(query).Scan(&post.Title, &post.Content)
 	if err == sql.ErrNoRows {
 		c.ViewArgs["message"] = "No matching results"
-		return c.Render()
+		return c.RenderTemplate("App/SearchResults.html")
 	}
 
 }
