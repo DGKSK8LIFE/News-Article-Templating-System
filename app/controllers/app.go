@@ -16,7 +16,7 @@ type App struct {
 	*revel.Controller
 }
 
-// RESTful API POST struct (will be redundant until I start work on the API)
+// RESTful API POST struct
 type Post struct {
 	Content   string
 	Timestamp string
