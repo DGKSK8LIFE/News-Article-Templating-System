@@ -35,9 +35,10 @@ func (c App) Search(query string) revel.Result {
 	query := fmt.Sprintf("SELECT title, content FROM article WHERE title LIKE %'%v'%", query)
 	err := app.DB.QueryRow(query).Scan(&post.Title, &post.Content)
 	if err == sql.ErrNoRows {
-		// return c.RenderTemplate
+		c.ViewArgs["message"] = "No matching results"
+		return c.Render()
 	}
-	return c.Render()
+
 }
 
 // Handles Post Request To Desired Article
