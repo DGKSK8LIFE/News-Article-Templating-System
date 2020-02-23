@@ -8,13 +8,13 @@
 4. `setup.sql` script for users who want to clone and run the working app with its database
 5. Removed bugs allowing the serving of non-existent routes (ie: requested article doesn't exist -> now gives 404 instead of serving it)
 6. Improved documentation and organization
+7. Get stylesheet to work in Post.html
 
 ## TODO
 
  - Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Implement working search engine
  - Implement working template preview hyperlinks
- - Get stylesheet to work in Post.html
  - Attain eventual goals (contained in README).
 
 
