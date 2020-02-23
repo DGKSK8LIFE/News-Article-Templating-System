@@ -7,7 +7,7 @@ A full stack Go Revel webapplication that enables users to create short and simp
 
 - Go Revel 
 - Go SQL Driver
-- Go sqlx (eventually; over gosql driver)
+- Go MySQL Driver
 - MVC Architecture
 - Elastisearch (go-elastisearch) (potentially; for now can just send an SQL LIKE query) 
 - MySQL
@@ -25,7 +25,7 @@ A full stack Go Revel webapplication that enables users to create short and simp
 - Users, after creative news pages, would submit them to the server, then they'd have their article available as a path with the syntax: `:id/:title` 
 - Users would be able to search through all created articles (Can use an sql Like statement for now, then if I want better search results and database scanning, elastisearch)
 - Database could use binary search to reduce bandwidth usage/time spent indexing the database server 
-- Eventually would make a template design/creation system for aesthetic diversity among articles
+- Eventually would make a template design/creation system for aesthetic diversity among articles 
 - Would eventually implement article crawling for search engine optimization (potentially)
 - Potentially, after the stable build is written and works flawlessly, integrate incremental saving and updating of elements of templating files which would be facilitated by a more dynamic design (implemented with gRPC and other tools); metadata about images that were uploaded and associated with it and their location would be written to the database as the author is creating the article and text would be saved and updated incrementally so they don’t lose any work; have local storage sync with server/db (buffered)
 - To serve an article upon user request, the application will query its article JSON RESTful API. (eventually)
