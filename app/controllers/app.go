@@ -33,12 +33,15 @@ func (c App) Index() revel.Result {
 
 // will use this to query the database with a wildcard query and then (via frontend gohtml templates), will iterate over results
 func (c App) Search(query string) revel.Result {
-	articles := Article{}
+	articles := []Article{}
 	wildcardQuery := fmt.Sprintf("SELECT title, content FROM article WHERE title LIKE %'%v'%", query)
-	err := app.DB.QueryRow(wildcardQuery).Scan(&articles.Title, &articles.Content)
-	if err == sql.ErrNoRows {
+	results, _ := app.DB.Query(wildcardQuery)
+	if results == nil {
 		c.ViewArgs["message"] = "No matching results"
 		return c.RenderTemplate("App/SearchResults.html")
+	}
+	for _, i := range results {
+		articles = append(articles, i)
 	}
 	message := fmt.Sprintf("Results for search: %s\n", query)
 	c.ViewArgs["message"] = message
