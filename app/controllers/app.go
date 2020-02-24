@@ -36,7 +36,7 @@ func (c App) Search(query string) revel.Result {
 	articles := []Article{}
 	wildcardQuery := fmt.Sprintf("SELECT title, content FROM article WHERE title LIKE '[%]%v[%]';", query)
 	results, err := app.DB.Query(wildcardQuery)
-	if results == nil || len(results) <= 0 {
+	if results == nil {
 		c.ViewArgs["message"] = "No matching results"
 		return c.RenderTemplate("App/SearchResults.html")
 	}
@@ -53,11 +53,13 @@ func (c App) Search(query string) revel.Result {
 		}
 		articles = append(articles, article)
 	}
-	message := fmt.Sprintf("Results for search %s:\n", query)
-	fmt.Println(articles)
-	c.ViewArgs["message"] = message
-	c.ViewArgs["articles"] = articles
-	return c.RenderTemplate("App/SearchResults.html")
+
+	if len(articles) != 0 {
+		message := fmt.Sprintf("Results for search %s:\n", query)
+		c.ViewArgs["message"] = message
+		c.ViewArgs["articles"] = articles
+		return c.RenderTemplate("App/SearchResults.html")
+	}
 
 }
 
