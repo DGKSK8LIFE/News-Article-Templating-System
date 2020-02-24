@@ -61,6 +61,9 @@ func (c App) Search(query string) revel.Result {
 		return c.RenderTemplate("App/SearchResults.html")
 	}
 
+	c.ViewArgs["message"] = "No matching results"
+	return c.RenderTemplate("App/SearchResults.html")
+
 }
 
 // Handles Post Request To Desired Article
