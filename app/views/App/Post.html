@@ -9,10 +9,12 @@
     <title>{{ .title }} @ News Article Templating System</title>
 </head>
 
+{{define "Post.html"}}
 <body>
     <h1>{{ .title }}</h1>
     <br>
     <p>{{ .text }}</p>
 </body>
+{{end}}
 
 </html>
