@@ -7,6 +7,8 @@ import (
 	"log"
 	"time"
 
+	"html"
+
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
 )
@@ -68,7 +70,7 @@ func (c App) ArticleTemplate() revel.Result {
 
 // Article Template data receiver; going to implement model interaction soon
 func (c App) SubmitArticle() revel.Result {
-	content := []string{c.Params.Get("text"), c.Params.Get("title")}
+	content := []string{html.EscapeString(c.Params.Get("text")), html.EscapeString(c.Params.Get("title"))}
 	query := fmt.Sprintf("INSERT INTO article (content, timestamp, title) VALUES ('%v', '%v', '%v');", content[0], time.Now().UTC().String(), content[1])
 	_, err := app.DB.Exec(query)
 	if err != nil {
