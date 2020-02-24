@@ -39,6 +39,7 @@ func (c App) Search(query string) revel.Result {
 		return c.RenderTemplate("App/SearchResults.html")
 	}
 	message := fmt.Sprintf("Results for search: %s\n", query)
+	fmt.Println(articles)
 	c.ViewArgs["message"] = message
 	c.ViewArgs["articles"] = articles
 	return c.RenderTemplate("App/SearchResults.html")
