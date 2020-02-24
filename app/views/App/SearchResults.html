@@ -12,11 +12,11 @@
 <body>
     <h1>{{ .message }}</h1>
     <br>
-    <!-- {{ range .articles }} !--> 
+    {{ range .articles }} 
 	<hr>
 	{{ template "Post.html" }}
 	</hr>
-    <!--{{ end }} !-->
+    {{ end }}
 </body>
 
 </html>
