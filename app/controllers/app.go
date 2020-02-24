@@ -40,9 +40,13 @@ func (c App) Search(query string) revel.Result {
 		c.ViewArgs["message"] = "No matching results"
 		return c.RenderTemplate("App/SearchResults.html")
 	}
+	articleList := make([]Article)
+	for _, i := range articles.Content {
+		articleList = append(articleList, i)
+	}
 	message := fmt.Sprintf("Results for search: %s\n", query)
 	c.ViewArgs["message"] = message
-	c.ViewArgs["articles"] = articles
+	c.ViewArgs["articles"] = articleList
 	return c.RenderTemplate("App/SearchResults.html")
 
 }
