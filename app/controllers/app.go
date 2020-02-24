@@ -40,7 +40,7 @@ func (c App) Search(query string) revel.Result {
 		c.ViewArgs["message"] = "No matching results"
 		return c.RenderTemplate("App/SearchResults.html")
 	}
-	articleList := make([]Article)
+	articleList := make([]Article, 0)
 	for _, i := range articles.Content {
 		articleList = append(articleList, i)
 	}
