@@ -47,7 +47,7 @@ func (c App) Search(query string) revel.Result {
 
 	for results.Next() {
 		article := Article{}
-		err := results.Scan(&article)
+		err := results.Scan(&article.Title, &article.Content)
 		if err != nil {
 			log.Fatalln(err)
 		}
