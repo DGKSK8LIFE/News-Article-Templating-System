@@ -14,7 +14,9 @@
     <br>
     {{ range .articles }} 
     <hr>
-    	{{ .articles }}
+    	<h2>{{ .Title }}</h2>
+	<br>
+	<p>{{ .Content }}</p>
     </hr>
     {{ end }}
 </body>
