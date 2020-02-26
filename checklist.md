@@ -9,7 +9,7 @@
 6. Improved documentation and organization
 7. Get stylesheet to work in Post.html
 8. Working Search System
-9. Working Article Previews (sort of)
+9. Working Article Previews that hyperlink to their designated articles(sort of)
 
 ## TODO
 
