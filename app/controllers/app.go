@@ -81,7 +81,6 @@ func (c App) Search() revel.Result {
 		}
 		articles = append(articles, article)
 	}
-	fmt.Printf("articles: %v\n", articles)
 
 	if len(articles) != 0 && results != nil {
 		message := fmt.Sprintf("Results for search %s:\n", query)
