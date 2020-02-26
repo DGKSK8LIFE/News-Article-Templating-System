@@ -75,7 +75,7 @@ func (c App) Search() revel.Result {
 
 	for results.Next() {
 		article := Article{}
-		err := results.Scan(&article.Title, &article.Content)
+		err := results.Scan(&article.Title, &article.Id)
 		if err != nil {
 			log.Fatalln(err)
 		}
