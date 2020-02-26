@@ -12,15 +12,14 @@
 <body>
     <h1>{{ .message }}</h1>
     <br>
-    {{ range .articles }} 
-    <hr>
-    	<h2>{{ .Title }}</h2>
-	<br>
-	<p>{{ .Content }}</p>
-    </hr>
+    {{ if .articles }}
+    	{{ range .articles }}	
+    		<hr>
+		<a href=http://localhost:9000/article/{{ .Id }}/{{ .Title}}><h3>{{ .Title }}</h3></a>
+		</hr>
+	{{ end }}
+	<hr>
     {{ end }}
-    <hr>
-
     </hr>
 </body>
 

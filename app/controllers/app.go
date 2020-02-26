@@ -61,7 +61,7 @@ func (c App) Index() revel.Result {
 func (c App) Search() revel.Result {
 	query := c.Params.Form.Get("query")
 	articles := []Article{}
-	qstring := fmt.Sprintf("SELECT title, content FROM article WHERE title LIKE '%%%v%%';", query)
+	qstring := fmt.Sprintf("SELECT title, id FROM article WHERE title LIKE '%%%v%%';", query)
 	results, err := app.DB.Query(qstring)
 
 	if results == nil {
@@ -89,7 +89,6 @@ func (c App) Search() revel.Result {
 		return c.RenderTemplate("App/SearchResults.html")
 	}
 
-	c.ViewArgs["message"] = "No matching results"
 	return c.RenderTemplate("App/SearchResults.html")
 
 }
