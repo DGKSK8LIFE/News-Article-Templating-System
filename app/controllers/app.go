@@ -48,11 +48,13 @@ func (c App) Index() revel.Result {
 		}
 		articles = append(articles, article)
 	}
-	return c.RenderTemplate("App/Index.html")
 
 	if len(articles) != 0 && results != nil {
 		c.ViewArgs["articles"] = articles
+		return c.RenderTemplate("App/Index.html")
 	}
+
+	return c.RenderTemplate("App/Index.html")
 }
 
 // will use this to query the database with a wildcard query and then (via frontend gohtml templates), will iterate over results
