@@ -10,6 +10,7 @@
 7. Get stylesheet to work in Post.html
 8. Working Search System
 9. Working Article Previews that hyperlink to their designated articles
+10. Working Article Previews as Search Results
 
 ## TODO
 
