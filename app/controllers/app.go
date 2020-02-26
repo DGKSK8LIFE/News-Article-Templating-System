@@ -42,7 +42,7 @@ func (c App) Index() revel.Result {
 
 	for results.Next() {
 		article := Article{}
-		err := results.Scan(&article.Title, &article.Id)
+		err := results.Scan(&article.Title, html.UnEscapeString(&article.Id))
 		if err != nil {
 			log.Fatalln(err)
 		}
@@ -98,7 +98,7 @@ func (c App) Search() revel.Result {
 // Handles Post Request To Desired Article
 func (c App) GetArticle(id int, title string) revel.Result {
 	article := Article{}
-	query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, title)
+	query := fmt.Sprintf("SELECT content FROM article WHERE id='%v' AND title='%v';", id, html.EscapeString(title))
 	err := app.DB.QueryRow(query).Scan(&article.Content)
 	if err != sql.ErrNoRows {
 		fmt.Println("database nil err?")
