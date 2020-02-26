@@ -20,7 +20,7 @@
     {{ if .articles }}
     	{{ range .articles }}	
     		<hr>
-		<a href={{ .link }}>{{ .title }}</a>
+		<a href=localhost:9000/article/{{ .id }}>{{ .title }}</a>
 		</hr>
 	{{ end }}
 	<hr>
