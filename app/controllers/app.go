@@ -51,7 +51,7 @@ func (c App) Index() revel.Result {
 	return c.RenderTemplate("App/Index.html")
 
 	if len(articles) != 0 && results != nil {
-		c.ViewArgs[]
+		c.ViewArgs["articles"] = articles
 	}
 }
 
