@@ -28,7 +28,31 @@ type Article struct {
 
 // home page renderer
 func (c App) Index() revel.Result {
+	articles := []Article{}
+	query := fmt.Sprintf("SELECT title, id FROM article;")
+	results, err := app.DB.Query(query)
+
+	if results == nil {
+		return c.RenderTemplate("App/Index.html")
+	}
+
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	for results.Next() {
+		article := Article{}
+		err := results.Scan(&article.Title, &article.ID)
+		if err != nil {
+			log.Fatalln(err)
+		}
+		articles = append(articles, article)
+	}
 	return c.RenderTemplate("App/Index.html")
+
+	if len(articles) != 0 && results != nil {
+		c.ViewArgs[]
+	}
 }
 
 // will use this to query the database with a wildcard query and then (via frontend gohtml templates), will iterate over results
