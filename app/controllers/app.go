@@ -42,7 +42,7 @@ func (c App) Index() revel.Result {
 
 	for results.Next() {
 		article := Article{}
-		err := results.Scan(&article.Title, &article.ID)
+		err := results.Scan(&article.Title, &article.Id)
 		if err != nil {
 			log.Fatalln(err)
 		}
