@@ -16,6 +16,15 @@
   </form>
   <a href="/article_template">
     <h2>Create an article instead</h2>
+    <br>
+    {{ if .articles }}
+    	{{ range .articles }}	
+    		<hr>
+		<a href={{ .link }}>{{ .title }}</a>
+		</hr>
+	{{ end }}
+	<hr>
+    {{ end }}
   </a>
 </body>
 
