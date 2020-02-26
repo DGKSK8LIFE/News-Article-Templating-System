@@ -36,7 +36,8 @@ func (c App) Search() revel.Result {
 	query := c.Params.Query.Get("query")
 	fmt.Printf("query: %s\n", query)
 	articles := []Article{}
-	results, err := app.DB.Query("SELECT title, content FROM article WHERE title LIKE %v", query)
+	qstring := fmt.Sprintf("SELECT title, content FROM article WHERE title LIKE %v", query)
+	results, err := app.DB.Query(qstring)
 	fmt.Printf("results %v\n", results)
 
 	if results == nil {
