@@ -100,7 +100,3 @@ func (c App) SubmitArticle() revel.Result {
 	}
 	return c.Redirect(App.Index)
 }
-
-func clearArticleSlice(a []Article) {
-	a = a[:0]
-}
