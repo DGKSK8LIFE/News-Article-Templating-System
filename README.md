@@ -38,6 +38,12 @@ Working on it...
 
 [Checklist](checklist.md)
 
+## Installation
+
+Clone the repo in `~{YOUR PRECEDING DIRECTORY}/go/src`
+Make sure go is installed
+Make sure go revel is installed 
+
 ## Architecture Visualization
 
 ### MVC (Model View Controller)
