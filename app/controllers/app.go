@@ -58,7 +58,7 @@ func (c App) Index() revel.Result {
 	return c.RenderTemplate("App/Index.html")
 }
 
-// will use this to query the database with a wildcard query and then (via frontend gohtml templates), will iterate over results
+// queries the database with a wildcard query and then submits a struct slice -> frontend iterates over and displays results
 func (c App) Search() revel.Result {
 	query := c.Params.Form.Get("query")
 	articles := []Article{}
