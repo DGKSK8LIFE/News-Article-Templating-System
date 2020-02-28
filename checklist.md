@@ -11,10 +11,12 @@
 8. Working Search System
 9. Working Article Previews that hyperlink to their designated articles
 10. Working Article Previews as Search Results
+11. Articles with dangerous characters are encoded 
 
 ## TODO
 
  - Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Attain eventual goals (contained in README).
+ - Make encoded articles route properly and serve data (not give 500)
 
 
