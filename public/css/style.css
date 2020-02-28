@@ -4,3 +4,8 @@ body {
     background-color: black;
     color: white;
 }
+
+hr {
+	border: 0.5px dashed white;
+	border-radius: 0.3px;	
+}
