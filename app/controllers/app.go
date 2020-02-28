@@ -95,7 +95,7 @@ func (c App) Search() revel.Result {
 
 }
 
-// Handles Post Request To Desired Article
+// Handles Get Request To Desired Article
 func (c App) GetArticle(id int, title string) revel.Result {
 	article := Article{}
 	query := fmt.Sprintf("SELECT content FROM article WHERE id=%v AND title='%v'", id, title)
