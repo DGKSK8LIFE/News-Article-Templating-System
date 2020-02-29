@@ -5,6 +5,7 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	"net/url"
 	"time"
 
 	"html"
@@ -105,7 +106,7 @@ func (c App) GetArticle(id int, title string) revel.Result {
 		c.Response.Status = 404
 		return c.Render()
 	}
-	c.ViewArgs["title"] = title
+	c.ViewArgs["title"] = url.QueryEscape(title)
 	c.ViewArgs["text"] = article.Content
 	return c.RenderTemplate("App/Post.html")
 }
