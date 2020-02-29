@@ -15,7 +15,7 @@
     {{ if .articles }}
     	{{ range .articles }}	
     		<hr>
-		<a href=http://localhost:9000/article/{{ .Id }}/{{ .Title}}><h3>{{ .Title }}</h3></a>
+		<a href=http://localhost:9000/article/{{ .Id }}/{{ urlquery .Title}}><h3>{{ .Title }}</h3></a>
 		</hr>
 	{{ end }}
 	<hr>
