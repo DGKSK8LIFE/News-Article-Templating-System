@@ -13,6 +13,7 @@
 10. Working Article Previews as Search Results
 11. Articles with dangerous characters are escaped 
 12. Articles with dangerous characters are url encoded when hyperlinking 
+13. Encoded URLs route properly
 
 ## TODO
 
