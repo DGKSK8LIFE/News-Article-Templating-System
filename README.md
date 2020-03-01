@@ -27,8 +27,7 @@ A full stack Go Revel webapplication that enables users to create short and simp
 - Database could use binary search to reduce bandwidth usage/time spent indexing the database server (unnescessary at this scale)
 - Eventually would make a template design/creation system for aesthetic diversity among articles (still unsure about this)
 - Would eventually implement article crawling for search engine optimization (potentially)
-- Potentially, after the stable build is written and works flawlessly, integrate incremental saving and updating of elements of templating files which would be facilitated by a more dynamic design (implemented with gRPC and other tools); metadata about images that were uploaded and associated with it and their location would be written to the database as the author is creating the article and text would be saved and updated incrementally so they don’t lose any work; have local storage sync with server/db (buffered) (# PROBABLY NOT GOING TO HAPPEN AS IT MAKES NO SENSE WITH NO USER ACCOUNTS)
-
+- Eventually implement React for more than just client side rendering (ie: sexy frontend)
 
 ## Completion Status
 
