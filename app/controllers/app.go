@@ -122,7 +122,7 @@ func (c App) SubmitArticle() revel.Result {
 	if err != nil {
 		log.Fatalf("query err: %s\n", err)
 	}
-	_, err := query.Exec(content[0], time.Now().UTC().String(), content[1])
+	_, err = query.Exec(content[0], time.Now().UTC().String(), content[1])
 	if err != nil {
 		log.Fatalf("Query failed: %s\n", err)
 	}
