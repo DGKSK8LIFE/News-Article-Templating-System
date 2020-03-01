@@ -21,5 +21,7 @@
 
  - Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Attain eventual goals (contained in README).
+ - Implement markdown rendering
+ - Implement image serving and uploading ability in templates (with use of CDN).
 
 
