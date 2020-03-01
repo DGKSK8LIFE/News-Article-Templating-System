@@ -14,6 +14,7 @@
 11. Articles with dangerous characters are escaped 
 12. Articles with dangerous characters are url encoded when hyperlinking 
 13. Encoded URLs route properly
+14. Removed need to manually escape html characters (made method change so that html is escaped automagically and is stored unescaped in database)
 
 ## TODO
 
