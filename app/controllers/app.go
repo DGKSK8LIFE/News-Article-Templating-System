@@ -76,7 +76,8 @@ func (c App) Search() revel.Result {
 		err := results.Scan(&article.Title, &article.Id)
 		if err != nil {
 			log.Fatalln(err)
-		} articles = append(articles, article)
+		}
+		articles = append(articles, article)
 	}
 
 	if len(articles) != 0 && results != nil {
