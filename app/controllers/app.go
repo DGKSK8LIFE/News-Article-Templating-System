@@ -97,7 +97,7 @@ func (c App) Search() revel.Result {
 // Handles Get Request To Desired Article
 func (c App) GetArticle(id int, title string) revel.Result {
 	article := Article{}
-	query := fmt.Sprintf("SELECT content FROM article WHERE id=%v AND title='%v'", id, title)
+	query := fmt.Sprintf("SELECT content FROM article WHERE id=%v AND title=%v", id, title)
 	err := app.DB.QueryRow(query).Scan(&article.Content)
 	if err != sql.ErrNoRows {
 		fmt.Println("database nil err?")
@@ -105,8 +105,8 @@ func (c App) GetArticle(id int, title string) revel.Result {
 		c.Response.Status = 404
 		return c.Render()
 	}
-	c.ViewArgs["title"] = html.UnescapeString(title)
-	c.ViewArgs["text"] = html.UnescapeString(article.Content)
+	c.ViewArgs["title"] = title
+	c.ViewArgs["text"] = article.Content
 	return c.RenderTemplate("App/Post.html")
 }
 
