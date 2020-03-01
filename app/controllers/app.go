@@ -7,8 +7,6 @@ import (
 	"log"
 	"time"
 
-	"html"
-
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
 )
@@ -97,15 +95,15 @@ func (c App) Search() revel.Result {
 // Handles Get Request To Desired Article
 func (c App) GetArticle(id int, title string) revel.Result {
 	article := Article{}
-	query := fmt.Sprintf("SELECT content FROM article WHERE id=%v AND title=%v", id, title)
-	err := app.DB.QueryRow(query).Scan(&article.Content)
+	query := fmt.Sprintf("SELECT content, title FROM article WHERE id=%v", id)
+	err := app.DB.QueryRow(query).Scan(&article.Content, &article.Title)
 	if err != sql.ErrNoRows {
 		fmt.Println("database nil err?")
 	} else if err == sql.ErrNoRows {
 		c.Response.Status = 404
 		return c.Render()
 	}
-	c.ViewArgs["title"] = title
+	c.ViewArgs["title"] = article.Title
 	c.ViewArgs["text"] = article.Content
 	return c.RenderTemplate("App/Post.html")
 }
@@ -117,7 +115,7 @@ func (c App) ArticleTemplate() revel.Result {
 
 // Article Template data receiver; going to implement model interaction soon
 func (c App) SubmitArticle() revel.Result {
-	content := []string{html.EscapeString(c.Params.Get("text")), c.Params.Get("title")}
+	content := []string{c.Params.Get("text"), c.Params.Get("title")}
 	query, err := app.DB.Prepare("INSERT INTO article (content, timestamp, title) VALUES (?, ?, ?)")
 	if err != nil {
 		log.Fatalf("query err: %s\n", err)
