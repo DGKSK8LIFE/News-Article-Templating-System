@@ -8,6 +8,7 @@ import (
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/gomarkdown/markdown"
 	"github.com/revel/revel"
 )
 
@@ -103,8 +104,8 @@ func (c App) GetArticle(id int, title string) revel.Result {
 		c.Response.Status = 404
 		return c.Render()
 	}
-	c.ViewArgs["title"] = article.Title
-	c.ViewArgs["text"] = article.Content
+	c.ViewArgs["title"] = markdown.ToHTML([]byte(article.Title), nil, nil)
+	c.ViewArgs["text"] = markdown.ToHTML([]byte(article.Content), nil, nil)
 	return c.RenderTemplate("App/Post.html")
 }
 

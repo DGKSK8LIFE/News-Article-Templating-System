@@ -10,6 +10,19 @@
   version = "v1.5.0"
 
 [[projects]]
+  branch = "master"
+  digest = "1:bde7b570dd610aad6c10ae09b82557026f692177765cecbfefeac32ae0e6a979"
+  name = "github.com/gomarkdown/markdown"
+  packages = [
+    ".",
+    "ast",
+    "html",
+    "parser",
+  ]
+  pruneopts = ""
+  revision = "1813ea067497f0a7eab5bd6a3cbe0e255e079d37"
+
+[[projects]]
   digest = "1:a970a0ada840519f69920ea4ce6be93ef6bbe04843730983ba699c06021fd789"
   name = "github.com/inconshreveable/log15"
   packages = ["term"]
@@ -146,6 +159,7 @@
   analyzer-version = 1
   input-imports = [
     "github.com/go-sql-driver/mysql",
+    "github.com/gomarkdown/markdown",
     "github.com/revel/modules/static/app/controllers",
     "github.com/revel/modules/testrunner/app",
     "github.com/revel/modules/testrunner/app/controllers",
