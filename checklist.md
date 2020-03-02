@@ -16,13 +16,13 @@
 12. Articles with dangerous characters are url encoded when hyperlinking 
 13. Encoded URLs route properly
 14. Removed need to manually escape html characters (made method change so that html is escaped automagically and is stored unescaped in database)
+15. Implemented route redundancy of article title
 
 ## TODO
 
  - Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Attain eventual goals (contained in README).
  - Implement markdown rendering
- - Implement route redundancy of article title
  - Implement image serving and uploading ability in templates (with use of CDN).
 
 
