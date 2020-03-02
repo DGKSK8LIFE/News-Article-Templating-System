@@ -28,7 +28,7 @@ type Article struct {
 // home page renderer
 func (c App) Index() revel.Result {
 	articles := []Article{}
-	query := fmt.Sprintf("SELECT title, id FROM article order by id desc limit 25;")
+	query := fmt.Sprintf("SELECT title, id FROM article order by id desc limit 25")
 	results, err := app.DB.Query(query)
 
 	if results == nil {
