@@ -104,8 +104,8 @@ func (c App) GetArticle(id int, title ...string) revel.Result {
 		c.Response.Status = 404
 		return c.Render()
 	}
-	c.ViewArgs["title"] = markdown.ToHTML([]byte(article.Title), nil, nil)
-	c.ViewArgs["text"] = markdown.ToHTML([]byte(article.Content), nil, nil)
+	c.ViewArgs["title"] = article.Title
+	c.ViewArgs["text"] = string(markdown.ToHTML([]byte(article.Content), nil, nil))
 	return c.RenderTemplate("App/Post.html")
 }
 
