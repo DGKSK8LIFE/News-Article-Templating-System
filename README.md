@@ -8,13 +8,10 @@ A full stack Go Revel webapplication that enables users to create short and simp
 - Go SQL Driver
 - Go MySQL Driver
 - MVC Architecture
-- Elastisearch (go-elastisearch) (potentially; for now can just send an SQL LIKE query) 
 - MySQL
 - Godep for dependency management
-- Redis (will only be used if live template saving is going to be implemented)
 - Go HTML Templates 
-- ReactJS (eventually)
-- Markdown Engine for article formatting (eventually)
+- Markdown Engine for article formatting (in progress)
 
 ## Desired Features
 
