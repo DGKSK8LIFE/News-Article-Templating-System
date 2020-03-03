@@ -17,6 +17,8 @@
 13. Encoded URLs route properly
 14. Removed need to manually escape html characters (made method change so that html is escaped automagically and is stored unescaped in database)
 15. Implemented route redundancy of article title
+16. Implemented markdown text rendering
+17. Implemented html/css rendering with security and xss mitigation (js is escaped)
 
 ## TODO
 
