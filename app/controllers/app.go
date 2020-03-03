@@ -106,7 +106,7 @@ func (c App) GetArticle(id int, title ...string) revel.Result {
 		return c.Render()
 	}
 	c.ViewArgs["title"] = article.Title
-	c.ViewArgs["text"] = template.JsEscapeString(string(markdown.ToHTML([]byte(article.Content), nil, nil)))
+	c.ViewArgs["text"] = template.JSEscapeString(string(markdown.ToHTML([]byte(article.Content), nil, nil)))
 	return c.RenderTemplate("App/Post.html")
 }
 
