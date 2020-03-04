@@ -27,7 +27,7 @@ var (
 
 func InitDB() {
 	fmt.Println("What file is your database info in? ")
-	err = fmt.Scan(&databaseInfoFile)
+	_, err = fmt.Scan(&databaseInfoFile)
 	DB, err = sql.Open("mysql", "tarekali@tcp(localhost:3306)/articles")
 	if err != nil {
 		log.Fatalf("DB Error: %s\n", err)
