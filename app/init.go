@@ -5,8 +5,6 @@ import (
 
 	"database/sql"
 
-	"fmt"
-
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
 )
@@ -21,8 +19,6 @@ var (
 	DB *sql.DB
 
 	err error
-
-	databaseInfoFile string
 )
 
 func InitDB() {
@@ -54,14 +50,8 @@ func init() {
 	// revel.DevMode and revel.RunMode only work inside of OnAppStart. See Example Startup Script
 	// ( order dependent )
 	// revel.OnAppStart(ExampleStartupScript)
-	revel.OnAppStart(obtainFile)
 	revel.OnAppStart(InitDB)
 	// revel.OnAppStart(FillCache)
-}
-
-func obtainFile() {
-	fmt.Println("What file is your database info in? ")
-	_, err = fmt.Scan(&databaseInfoFile)
 }
 
 // HeaderFilter adds common security headers
