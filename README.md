@@ -11,7 +11,7 @@ A full stack Go Revel webapplication that enables users to create short and simp
 - MySQL
 - Godep for dependency management
 - Go HTML Templates 
-- Markdown Engine for article formatting (in progress)
+- Markdown Engine for article formatting (finished)
 
 ## Desired Features
 
