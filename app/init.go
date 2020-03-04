@@ -5,6 +5,8 @@ import (
 
 	"database/sql"
 
+	"fmt"
+
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
 )
@@ -19,9 +21,13 @@ var (
 	DB *sql.DB
 
 	err error
+
+	databaseInfoFile string
 )
 
 func InitDB() {
+	fmt.Println("What file is your database info in? ")
+	err = fmt.Scan(&databaseInfoFile)
 	DB, err = sql.Open("mysql", "tarekali@tcp(localhost:3306)/articles")
 	if err != nil {
 		log.Fatalf("DB Error: %s\n", err)
