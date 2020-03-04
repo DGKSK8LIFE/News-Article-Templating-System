@@ -26,8 +26,6 @@ var (
 )
 
 func InitDB() {
-	fmt.Println("What file is your database info in? ")
-	_, err = fmt.Scan(&databaseInfoFile)
 	DB, err = sql.Open("mysql", "tarekali@tcp(localhost:3306)/articles")
 	if err != nil {
 		log.Fatalf("DB Error: %s\n", err)
@@ -56,8 +54,14 @@ func init() {
 	// revel.DevMode and revel.RunMode only work inside of OnAppStart. See Example Startup Script
 	// ( order dependent )
 	// revel.OnAppStart(ExampleStartupScript)
+	revel.OnAppStart(obtainFile)
 	revel.OnAppStart(InitDB)
 	// revel.OnAppStart(FillCache)
+}
+
+func obtainFile() {
+	fmt.Println("What file is your database info in? ")
+	_, err = fmt.Scan(&databaseInfoFile)
 }
 
 // HeaderFilter adds common security headers
