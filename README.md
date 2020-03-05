@@ -12,11 +12,10 @@ A full stack Go Revel webapplication that enables users to create short and simp
 - Godep for dependency management
 - Go HTML Templates 
 - gomarkdown Engine for article formatting (finished)
-- (Soon) React
+- css boostrap
 
 ## Desired Features
 
-- Client-Side rendering (potentially)
 - An Article template that has a grid for images, then allocates the rest of the space for text
 - User would upload images to the grid portion and is able to write markdown text (uses markdown engine); for now the user can just use html to upload images, can implement the uploading of images when I get access to a CDN
 - Users, after creative news pages, submit them to the server, then they have their article available to access as a path with the syntax: `:id/:title`
