@@ -89,7 +89,8 @@ func (c App) Search() revel.Result {
 		return c.RenderTemplate("App/SearchResults.html")
 	}
 
-	c.ViewArgs["message"] = "No results found"
+	nothingFound := fmt.Sprintf("No results found for search: %s\n", query)
+	c.ViewArgs["message"] = nothingFound
 	return c.RenderTemplate("App/SearchResults.html")
 
 }
