@@ -25,6 +25,6 @@
  - Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Attain eventual goals (contained in README).
  - Implement image serving and uploading ability in templates (with use of CDN). (am complacement with just html image loading for now)
- - Implement common-user friendly UI
+ - Implement common-user friendly UI (in the works with bootstrap)
 
 
