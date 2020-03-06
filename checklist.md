@@ -19,12 +19,12 @@
 15. Implemented route redundancy of article title
 16. Implemented markdown text rendering
 17. Implemented html/css rendering with security and xss mitigation (js is escaped)
+18. Implemented user friendly UI with bootstrap (will be improved)
 
 ## TODO
 
  - Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Attain eventual goals (contained in README).
  - Implement image serving and uploading ability in templates (with use of CDN). (am complacement with just html image loading for now)
- - Implement common-user friendly UI (in the works with bootstrap)
 
 
