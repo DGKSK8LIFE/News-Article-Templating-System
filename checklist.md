@@ -19,7 +19,7 @@
 15. Implemented route redundancy of article title
 16. Implemented markdown text rendering
 17. Implemented html/css rendering with security and xss mitigation (js is escaped)
-18. Implemented user friendly UI with bootstrap/min css (will be improved)
+18. Implemented user friendly UI with bootstrap/min-css (will be improved)
 
 ## TODO
 
