@@ -25,7 +25,8 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" action="/search/" method="post">
-	      <input class="form-control mr-sm-2" type="text" placeholder="Search for an article by title name..." name="query" required="required">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search for an article by title name..."
+          name="query" required="required">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
@@ -33,17 +34,17 @@
   <br>
   <h1>Articles:</h1>
   <div class="previews">
-  <br>
-  {{ if .articles }}
-  {{ range .articles }}
-  <hr>
-  <a href=http://localhost:9000/article/{{ .Id }}/{{ urlquery .Title}}>
-    <h3>{{ .Title }}</h3>
-  </a>
-  </hr>
-  {{ end }}
-  <hr>
-  {{ end }}
+    <br>
+    {{ if .articles }}
+    {{ range .articles }}
+    <hr>
+    <a href=http://localhost:9000/article/{{ .Id }}/{{ urlquery .Title}}>
+      <h3>{{ .Title }}</h3>
+    </a>
+    </hr>
+    {{ end }}
+    <hr>
+    {{ end }}
   </div>
 </body>
 
