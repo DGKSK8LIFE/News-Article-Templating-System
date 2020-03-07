@@ -28,4 +28,3 @@
  - Implement image serving and uploading ability in templates (with use of CDN). (am complacent with just html image loading for now)
  - Add proper formatting to files for readability
 
-
