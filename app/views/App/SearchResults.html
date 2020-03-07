@@ -32,6 +32,7 @@
   </nav>
     <br>
     <h1>{{ .message }}</h1>
+    <div class="previews">
     <br>
     {{ if .articles }}
     	{{ range .articles }}	
@@ -41,6 +42,7 @@
 	{{ end }}
 	<hr>
     {{ end }}
+    </div>
     </hr>
 </body>
 

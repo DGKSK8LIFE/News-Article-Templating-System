@@ -6,3 +6,7 @@ hr {
 	border: 0.5px dashed white;
 	border-radius: 0.3px;	
 }
+
+.previews {
+	text-align: left;
+}
