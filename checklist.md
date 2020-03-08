@@ -20,11 +20,12 @@
 16. Implemented markdown text rendering
 17. Implemented html/css rendering with security and xss mitigation (js is escaped)
 18. Implemented user friendly UI with bootstrap/min-css (will be improved)
+19. Added proper formatting to files for readability
 
 ## TODO
 
  - Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Attain eventual goals (contained in README).
  - Implement image serving and uploading ability in templates (with use of CDN). (am complacent with just html image loading for now)
- - Add proper formatting to files for readability
+
 
