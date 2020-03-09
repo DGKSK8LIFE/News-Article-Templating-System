@@ -1,0 +1,17 @@
+{{ define "Preview.html" }}
+<div class="previews">
+    <br>
+    {{ if .articles }}
+    {{ range .articles }}
+    <hr>
+    <a href=http://localhost:9000/article/{{ .Id }}/{{ urlquery .Title}}>
+      <h3>{{ .Title }}</h3>
+    </a>
+    </hr>
+    {{ end }}
+    <hr>
+    {{ end }}
+    </hr>
+</div>
+{{ end }}
+
