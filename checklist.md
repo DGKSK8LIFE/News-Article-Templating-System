@@ -26,7 +26,7 @@
 
  - Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Attain eventual goals (contained in README).
- - Implement image serving and uploading ability in templates (with use of CDN). (am complacent with just html image loading for now)
+ - Implement image serving and uploading ability in templates (with use of CDN). (am complacent with just html image support for now)
  - Display timestamp of articles in minute text (in previews and article routes) 
 
 
