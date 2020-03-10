@@ -99,8 +99,8 @@ func (c App) Search() revel.Result {
 // Handles Get Request To Desired Article
 func (c App) GetArticle(id int, title ...string) revel.Result {
 	article := Article{}
-	query := fmt.Sprintf("SELECT content, title FROM article WHERE id=%v", id)
-	err := app.DB.QueryRow(query).Scan(&article.Content, &article.Title)
+	query := fmt.Sprintf("SELECT content, title, timestamp FROM article WHERE id=%v", id)
+	err := app.DB.QueryRow(query).Scan(&article.Content, &article.Title, &article.Timestamp)
 	if err != sql.ErrNoRows {
 		fmt.Println("database nil err?")
 	} else if err == sql.ErrNoRows {
@@ -109,6 +109,7 @@ func (c App) GetArticle(id int, title ...string) revel.Result {
 	}
 	c.ViewArgs["title"] = article.Title
 	c.ViewArgs["text"] = template.HTML(markdown.ToHTML([]byte(article.Content), nil, nil))
+	c.ViewArgs["timestamp"] = article.Timestamp
 	return c.RenderTemplate("App/Post.html")
 }
 
