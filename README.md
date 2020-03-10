@@ -12,7 +12,7 @@ A full-stack Go Revel webapplication that enables users to create news articles 
 - Godep for dependency management
 - Go HTML Templates 
 - gomarkdown Engine for article formatting (finished)
-- css boostrap
+- CSS Bootstrap
 
 ## Desired Features
 
