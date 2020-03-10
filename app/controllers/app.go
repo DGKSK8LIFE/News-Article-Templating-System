@@ -18,7 +18,7 @@ type App struct {
 	*revel.Controller
 }
 
-// RESTful API Article struct
+// Article struct containing its database fields
 type Article struct {
 	Content   string
 	Timestamp string
