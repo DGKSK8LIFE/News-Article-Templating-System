@@ -17,7 +17,7 @@
   <form action="/submit_article" method="POST">
     <input type="text" maxlength="60" name="title" required="required" placeholder="Title">
     <br>
-    <textarea cols="50" rows="10" name="text" required placeholder="Article Content"></textarea>
+    <textarea cols="50" rows="10" name="text" required placeholder="Article Content" maxlength="40000"></textarea>
     <br>
     <input type="submit" value="Create" class="btn btn-secondary">
   </form>
