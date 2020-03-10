@@ -21,6 +21,7 @@
 17. Implemented html/css rendering with security and xss mitigation (js is escaped)
 18. Implemented user friendly UI with bootstrap/min-css (will be improved)
 19. Added proper formatting to files for readability
+20. Removed need to redundantly copy same html over multiple files; used template importing 
 
 ## TODO
 
