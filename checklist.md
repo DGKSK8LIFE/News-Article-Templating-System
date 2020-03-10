@@ -22,12 +22,11 @@
 18. Implemented user friendly UI with bootstrap/min-css (will be improved)
 19. Added proper formatting to files for readability
 20. Removed need to redundantly copy same html over multiple files; used template importing 
+21. Implemented displaying timestamp of articles (when they were created) in minute text 
 
 ## TODO
 
  - Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Attain eventual goals (contained in README).
  - Implement image serving and uploading ability in templates (with use of CDN). (am complacent with just html image support for now)
- - Display timestamp of articles in minute text (in previews and article routes) 
-
 
