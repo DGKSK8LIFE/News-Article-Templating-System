@@ -20,12 +20,14 @@ GET /article_template                            App.ArticleTemplate
 POST /submit_article                             App.SubmitArticle
 
 GET /article/:id/*title 				 App.GetArticle 
-GET /article/:id/*title 				 App.GetArticleJSON
-
 GET /article/:id 					 App.GetArticle 
-GET /article/:id 					 App.GetArticleJSON
 
 POST /search				 	         App.Search
+
+GET /api/article/:id 					 App.GetArticleJSON
+GET /api/article/:id/*title 				 App.GetArticleJSON
+
+
 # Catch all, this will route any request into the controller path
 #
 #                    **** WARNING ****
