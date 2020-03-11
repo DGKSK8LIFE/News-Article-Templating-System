@@ -19,7 +19,7 @@ A full-stack Go Revel webapplication that enables users to create news articles 
 
 - An Article template that has a grid for images, then allocates the rest of the space for text
 - User would upload images to the grid portion and is currently able to write markdown text (uses markdown engine)/HTML; for now the user can just use html to upload images, can implement the uploading of images when I get access to a CDN
-- Users, after creating news pages, submit them to the server, then have their article available to access as a path with the syntax: `:id/*title`
+- Users, after creating news pages, submit them to the server, then have their article available to access as a path with the syntax: `/article/:id/*title` or `/article/:id/`
 - Users would be able to search through all created articles (use an sql Like statement for now, then if I want better search results and database scanning: elastisearch) (shows users article preview which hyperlinks them to the article as a search result)
 - Database could use binary search to reduce bandwidth usage/time spent indexing the database server (unnescessary at this scale)
 - Eventually would make a template design/creation system for aesthetic diversity among articles (still unsure about this)
