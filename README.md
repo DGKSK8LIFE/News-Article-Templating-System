@@ -13,6 +13,7 @@ A full-stack Go Revel webapplication that enables users to create news articles 
 - Go HTML Templates 
 - gomarkdown Engine for article formatting (finished)
 - CSS Bootstrap
+- JSON (integrated with revel)
 
 ## Desired Features
 
