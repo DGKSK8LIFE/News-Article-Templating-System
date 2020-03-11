@@ -20,10 +20,10 @@ type App struct {
 
 // Article struct containing its database fields
 type Article struct {
-	Content   string
-	Timestamp string
-	Title     string
-	Id        int
+	Content   string `json:"Content"`
+	Timestamp string `json:"Timestamp"`
+	Title     string `json:"Title"`
+	Id        int    `json:"Id"`
 }
 
 // home page renderer
