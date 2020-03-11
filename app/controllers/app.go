@@ -118,16 +118,17 @@ func (c App) GetArticleJSON(id int, title ...string) revel.Result {
 	article := Article{}
 	query := fmt.Sprintf("SELECT content, title, timestamp FROM article WHERE id=%v", id)
 	err := app.DB.QueryRow(query).Scan(&article.Content, &article.Title, &article.Timestamp, &article.Id)
-	data := make(map[string]interface{})
 	if err != sql.ErrNoRows {
+		data := make(map[string]interface{})
 		data["error"] = nil
 		data["article"] = article
-	} else if err == sql.ErrNoRows {
-		c.Response.Status = 404
-		return c.Render()
+		c.Response.ContentType = "application/json"
+		return c.RenderJSON(data)
 	}
-	c.Response.ContentType = "application/json"
-	return c.RenderJSON(data)
+
+	c.Response.Status = 404
+	return c.Render()
+
 }
 
 // Article Template renderer
