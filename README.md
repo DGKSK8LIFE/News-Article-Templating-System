@@ -23,7 +23,6 @@ A full-stack Go Revel webapplication that enables users to create news articles 
 - Users would be able to search through all created articles (use an sql Like statement for now, then if I want better search results and database scanning: elastisearch) (shows users article preview which hyperlinks them to the article as a search result)
 - Database could use binary search to reduce bandwidth usage/time spent indexing the database server (unnescessary at this scale)
 - Eventually would make a template design/creation system for aesthetic diversity among articles (still unsure about this)
-- Would eventually implement article crawling for search engine optimization (potentially)
 - Very nice interface utilizing html5, css3, and bootstrap/js/jquery
 
 ## Completion Status
