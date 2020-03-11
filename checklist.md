@@ -23,11 +23,11 @@
 19. Added proper formatting to files for readability
 20. Removed need to redundantly copy same html over multiple files; used template importing 
 21. Implemented displaying timestamp of articles (when they were created) in minute text 
+22. Implemented working JSON api 
 
 ## TODO
 
  - Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Attain eventual goals (contained in README).
  - Implement image serving and uploading ability in templates (with use of CDN). (am complacent with just html image support for now)
- - Implement JSON api
 
