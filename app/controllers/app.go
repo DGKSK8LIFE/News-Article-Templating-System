@@ -115,9 +115,9 @@ func (c App) GetArticle(id int, title ...string) revel.Result {
 
 // Marshals article data to JSON and then serves it (works as an API)
 func (c App) GetArticleJSON(id int, title ...string) revel.Result {
-	article := Article{}
+	article := Article{Id: id}
 	query := fmt.Sprintf("SELECT content, title, timestamp FROM article WHERE id=%v", id)
-	err := app.DB.QueryRow(query).Scan(&article.Content, &article.Title, &article.Timestamp, &article.Id)
+	err := app.DB.QueryRow(query).Scan(&article.Content, &article.Title, &article.Timestamp)
 	if err != sql.ErrNoRows {
 		data := make(map[string]interface{})
 		data["error"] = nil
