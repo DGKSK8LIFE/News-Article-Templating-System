@@ -24,7 +24,7 @@ A full-stack Go Revel webapplication that enables users to create news articles 
 - Database could use binary search to reduce time spent indexing the database server (unnescessary at this scale)
 - Eventually would make a template design/creation system for aesthetic diversity among articles (unsure about this for now)
 - Very nice interface utilizing html5, css3, and bootstrap
-- API that serves json and is accessable with the routes: `/api/article/:id/` or `/api/article/:id/*title`
+- API that serves json and is accessable with the routes: `/api/article/:id/` or `/api/article/:id/*title` (will eventually be used to insert data into react-js view client-side)
 
 ## Completion Status
 
