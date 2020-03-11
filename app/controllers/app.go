@@ -126,7 +126,7 @@ func (c App) GetArticleJSON(id int, title ...string) revel.Result {
 		c.Response.Status = 404
 		return c.Render()
 	}
-
+	c.Response.ContentType = "application/json"
 	return c.RenderJSON(data)
 }
 
