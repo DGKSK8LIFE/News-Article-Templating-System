@@ -102,14 +102,14 @@ func (c App) GetArticle(id int, title ...string) revel.Result {
 	query := fmt.Sprintf("SELECT content, title, timestamp FROM article WHERE id=%v", id)
 	err := app.DB.QueryRow(query).Scan(&article.Content, &article.Title, &article.Timestamp)
 	if err != sql.ErrNoRows {
-		fmt.Println("database nil err?")
+		c.ViewArgs["title"] = article.Title
+		c.ViewArgs["text"] = template.HTML(markdown.ToHTML([]byte(article.Content), nil, nil))
+		c.ViewArgs["timestamp"] = article.Timestamp
 	} else if err == sql.ErrNoRows {
 		c.Response.Status = 404
 		return c.Render()
 	}
-	c.ViewArgs["title"] = article.Title
-	c.ViewArgs["text"] = template.HTML(markdown.ToHTML([]byte(article.Content), nil, nil))
-	c.ViewArgs["timestamp"] = article.Timestamp
+
 	return c.RenderTemplate("App/Post.html")
 }
 
