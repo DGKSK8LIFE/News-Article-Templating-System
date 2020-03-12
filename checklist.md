@@ -31,4 +31,5 @@
  - Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Attain eventual goals (contained in README).
  - Implement image serving and uploading ability in templates (with use of CDN). (am complacent with just html image support for now)
+ - Instead of serving server-side templates, use a javascript framework to client-side render the view by using the API's JSON-sending capabilities
 
