@@ -61,7 +61,7 @@ func (c App) Index() revel.Result {
 func (c App) Search() revel.Result {
 	query := c.Params.Form.Get("query")
 	articles := []Article{}
-	qstring := fmt.Sprintf("SELECT title, id FROM article WHERE title LIKE '%%%v%%' order by id desc", query)
+	qstring := fmt.Sprintf("SELECT title, id FROM article WHERE title LIKE '%%%v%%' OR content LIKE '%%%v%%' order by id desc", query, query)
 	results, err := app.DB.Query(qstring)
 
 	if results == nil {
