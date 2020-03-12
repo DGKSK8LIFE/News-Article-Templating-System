@@ -34,7 +34,7 @@ Working on it...
 
 [Checklist](checklist.md)
 
-## Architecture Visualization (will be updated eventually to show this app's specific architecture)
+## Architecture Visualization (will be updated eventually to show system's specific applications of architecture)
 
 ### MVC (Model View Controller)
 
