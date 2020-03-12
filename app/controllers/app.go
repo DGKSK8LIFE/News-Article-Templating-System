@@ -103,7 +103,7 @@ func (c App) Search() revel.Result {
 
 // Handles Get Request To Desired Article
 func (c App) GetArticle(id int, title ...string) revel.Result {
-	article := Article{}
+	article := Article{Id: id}
 	query := fmt.Sprintf("SELECT content, title, timestamp FROM article WHERE id=%v", id)
 	err := app.DB.QueryRow(query).Scan(&article.Content, &article.Title, &article.Timestamp)
 	if err != sql.ErrNoRows {
@@ -134,6 +134,13 @@ func (c App) GetArticleJSON(id int, title ...string) revel.Result {
 	c.Response.Status = 404
 	return c.Render()
 
+}
+
+// Scans Article Data to an Article instance
+func (a *Article) ScanArticleDBData() error {
+	query := fmt.Sprintf("SELECT content, title, timestamp FROM article WHERE id=%v", a.Id)
+	err := app.DB.QueryRow(query).Scan(&a.Content, &a.Title, &a.Timestamp)
+	return err
 }
 
 // Article Template data receiver; going to implement model interaction soon
