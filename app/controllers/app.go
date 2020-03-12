@@ -104,8 +104,7 @@ func (c App) Search() revel.Result {
 // Handles Get Request To Desired Article
 func (c App) GetArticle(id int, title ...string) revel.Result {
 	article := Article{Id: id}
-	query := fmt.Sprintf("SELECT content, title, timestamp FROM article WHERE id=%v", id)
-	err := app.DB.QueryRow(query).Scan(&article.Content, &article.Title, &article.Timestamp)
+	err := article.ScanArticleDBData()
 	if err != sql.ErrNoRows {
 		c.ViewArgs["title"] = article.Title
 		c.ViewArgs["text"] = template.HTML(markdown.ToHTML([]byte(article.Content), nil, nil))
@@ -121,8 +120,7 @@ func (c App) GetArticle(id int, title ...string) revel.Result {
 // Marshals article data to JSON and then serves it (works as an API)
 func (c App) GetArticleJSON(id int, title ...string) revel.Result {
 	article := Article{Id: id}
-	query := fmt.Sprintf("SELECT content, title, timestamp FROM article WHERE id=%v", id)
-	err := app.DB.QueryRow(query).Scan(&article.Content, &article.Title, &article.Timestamp)
+	err := article.ScanArticleDBData()
 	if err != sql.ErrNoRows {
 		data := make(map[string]interface{})
 		data["error"] = nil
@@ -133,7 +131,6 @@ func (c App) GetArticleJSON(id int, title ...string) revel.Result {
 
 	c.Response.Status = 404
 	return c.Render()
-
 }
 
 // Scans Article Data to an Article instance
