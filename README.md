@@ -15,7 +15,7 @@ A full-stack Go Revel webapplication that enables users to create news articles 
 - CSS Bootstrap
 - JSON (integrated with revel)
 
-## Features that are implemented and desired features
+## Features that are implemented/desired features
 
 - An Article template that has a grid for images, then allocates the rest of the space for text
 - User would upload images to the grid portion and is currently able to write markdown text (uses markdown engine)/HTML; for now the user can just use html to upload images, can implement the uploading of images when I get access to a CDN
