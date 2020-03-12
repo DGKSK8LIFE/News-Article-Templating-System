@@ -24,7 +24,7 @@
 20. Removed need to redundantly copy same html over multiple files; used template importing 
 21. Implemented displaying timestamp of articles (when they were created) in minute text 
 22. Implemented working JSON api 
-23. Implemented more thorough search through database
+23. Implemented more thorough search through database (searches through articles titles and article content)
 
 ## TODO
 
