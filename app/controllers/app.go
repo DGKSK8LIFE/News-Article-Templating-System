@@ -26,6 +26,11 @@ type Article struct {
 	Id        int    `json:"Id"`
 }
 
+// Article Creator Template renderer
+func (c App) ArticleTemplate() revel.Result {
+	return c.RenderTemplate("App/Article.html")
+}
+
 // home page renderer
 func (c App) Index() revel.Result {
 	articles := []Article{}
@@ -129,11 +134,6 @@ func (c App) GetArticleJSON(id int, title ...string) revel.Result {
 	c.Response.Status = 404
 	return c.Render()
 
-}
-
-// Article Creator Template renderer
-func (c App) ArticleTemplate() revel.Result {
-	return c.RenderTemplate("App/Article.html")
 }
 
 // Article Template data receiver; going to implement model interaction soon
