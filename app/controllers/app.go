@@ -131,7 +131,7 @@ func (c App) GetArticleJSON(id int, title ...string) revel.Result {
 
 }
 
-// Article Template renderer
+// Article Creator Template renderer
 func (c App) ArticleTemplate() revel.Result {
 	return c.RenderTemplate("App/Article.html")
 }
