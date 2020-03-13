@@ -32,6 +32,6 @@
  - Attain eventual goals (contained in README).
  - Implement image serving and uploading ability in templates (with use of CDN). (am complacent with just html image support for now)
  - Instead of serving server-side templates, use a javascript framework to client-side render the view by using the API's JSON-sending capabilities
- - Implement React interface (serving only js; no html files)
+ - Implement React interface (serving only js; no html files (css still imported though))
  - Use something like Moment.JS to take UTC time from server and then convert it to local time of the user
 
