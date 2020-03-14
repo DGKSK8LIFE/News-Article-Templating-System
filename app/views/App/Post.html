@@ -17,11 +17,14 @@
   {{ template "Navbar.html" }} 
   <div class="content">
   	<br>
-	<h1>{{ .title }}</h1> <strong>Created:</strong> {{ .timestamp }}
+	<h1>{{ .title }}</h1> <strong>Created:</strong> <a id="localTime"></a>
   	<hr>
   	<br>
   	<p>{{ .text }}</p>
   </div>
 </body>
 
+<script>
+	document.getElementbyid("localTime").innerHTML = moment().format(\'{{ .timestamp }}\');
+</script>
 </html>
