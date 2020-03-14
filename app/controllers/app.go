@@ -18,7 +18,7 @@ type App struct {
 	*revel.Controller
 }
 
-// Article struct containing its database fields
+// Article struct containing its database fields (and json keys)
 type Article struct {
 	Content   string `json:"Content"`
 	Timestamp string `json:"Timestamp"`
