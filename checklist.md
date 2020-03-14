@@ -32,4 +32,5 @@
  - Attain eventual goals (contained in README).
  - Implement image serving and uploading ability in templates (with use of CDN). (am complacent with just html image support for now)
  - Use something like client-side js to take UTC time from server and then convert it to local time of the user
+ - Implement pagination
 
