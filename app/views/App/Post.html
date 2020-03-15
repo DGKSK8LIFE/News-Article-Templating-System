@@ -26,6 +26,6 @@
 
 <script>
 	UTCTime = (document.getElementById("localTime")).innerHTML;
-	document.getElementById("localTime").innerHTML = moment(`${UTCTime}`).local().format('MMMM Do YYYY, h:mm:ss a');
+	document.getElementById("localTime").innerHTML = moment.unix(`${UTCTime}`).local().format('MMMM Do YYYY, h:mm:ss a');
 </script>
 </html>
