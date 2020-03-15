@@ -25,7 +25,7 @@
 22. Implemented working JSON api 
 23. Implemented more thorough search through database (searches through articles titles and article content)
 24. Removed 25 page template loading limit
-25. Implemented Moment.JS to convert UTC time to more legible format
+25. Implemented Moment.JS to convert UTC time to more legible format and user's local time in view
 
 ## TODO
 
