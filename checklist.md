@@ -25,11 +25,12 @@
 22. Implemented working JSON api 
 23. Implemented more thorough search through database (searches through articles titles and article content)
 24. Removed 25 page template loading limit
+25. Implemented Moment.JS to convert UTC time to more legible format
 
 ## TODO
 
  - Fix all bugs/Satisfy all feature requests that linger in uncompleted tasks sections (IE: Github issues)
  - Attain eventual goals (contained in README).
  - Implement image serving and uploading ability in templates (with use of CDN). (am complacent with just html image support for now)
- - Use something like client-side js to take UTC time from server and then convert it to local time of the user
+
 
