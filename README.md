@@ -2,7 +2,7 @@
 
 A full-stack Go Revel webapplication that enables users to create news articles and provides a platform for sharing them (with more style :)); essentially a stripped-down, mono-functional CMS (Content Management System).
 
-## Dependent Technologies
+## Dependencies
 
 - Go Revel 
 - Go SQL Driver
