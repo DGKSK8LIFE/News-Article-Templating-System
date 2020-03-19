@@ -15,6 +15,7 @@ A full-stack Go Revel webapplication that enables users to create news articles 
 - CSS Bootstrap
 - JSON (integrated with revel)
 - Moment.JS (imported on client-side with cloudflare min)
+- YAML
 
 ## Features that are implemented/desired features
 
