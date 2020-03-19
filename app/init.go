@@ -9,6 +9,10 @@ import (
 	"github.com/revel/revel"
 )
 
+type DB_user struct {
+	DB_user string `yaml:"DB_user"`
+}
+
 var (
 	// AppVersion revel app version (ldflags)
 	AppVersion string
@@ -19,10 +23,14 @@ var (
 	DB *sql.DB
 
 	err error
+
+	user DB_user
 )
 
 func InitDB() {
-	DB, err = sql.Open("mysql", "tarekali@tcp(localhost:3306)/articles")
+	yaml.Unmarshal([]byte("DB_user: 1", &user)
+	openString := fmt.Sprintf("%s@tcp(localhost:3306)/articles", user.DB_user)
+	DB, err = sql.Open("mysql", openString)
 	if err != nil {
 		log.Fatalf("DB Error: %s\n", err)
 	}
