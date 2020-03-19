@@ -1,12 +1,15 @@
 package app
 
 import (
+	"fmt"
+	"io/ioutil"
 	"log"
 
 	"database/sql"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/revel/revel"
+	"gopkg.in/yaml.v2"
 )
 
 type DB_user struct {
@@ -28,7 +31,14 @@ var (
 )
 
 func InitDB() {
-	yaml.Unmarshal([]byte("DB_user: 1", &user)
+	yamlFile, err := ioutil.ReadFile("DB_user.yaml")
+	if err != nil {
+		log.Fatalf("yamlFile err: %s\n", err)
+	}
+	err = yaml.Unmarshal(yamlFile, user)
+	if err != nil {
+		log.Fatalf("Unmarshal err: %s\n", err)
+	}
 	openString := fmt.Sprintf("%s@tcp(localhost:3306)/articles", user.DB_user)
 	DB, err = sql.Open("mysql", openString)
 	if err != nil {
