@@ -26,6 +26,7 @@
 23. Implemented more thorough search through database (searches through articles titles and article content)
 24. Removed 25 page template loading limit
 25. Implemented Moment.JS to convert UTC time to more legible format and user's local time in view
+26. Fixed issue #26 by loading database credentials from a yaml file
 
 ## TODO
 
