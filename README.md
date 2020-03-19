@@ -2,6 +2,15 @@
 
 A full-stack Go Revel webapplication that enables users to create news articles and provides a platform for sharing them (with more style :)); essentially a stripped-down, mono-functional CMS (Content Management System).
 
+## Installation
+
+1. git pull the project
+2. install dependencies (go modules are already handled with dep); just need to install the revel cli
+3. Run the `setup.sql` script on an sql database with the name `articles`
+4. Put a valid database user in `DB_user.yaml` file
+5. Have fun and run with `revel run`
+6. *note that this is the development code; it's not ready for production out of the box*
+
 ## Dependencies
 
 - Go Revel 
