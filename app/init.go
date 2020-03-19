@@ -31,11 +31,11 @@ var (
 )
 
 func InitDB() {
-	yamlFile, err := ioutil.ReadFile("DB_user.yaml")
+	yamlFile, err := ioutil.ReadFile("app/DB_user.yaml")
 	if err != nil {
 		log.Fatalf("yamlFile err: %s\n", err)
 	}
-	err = yaml.Unmarshal(yamlFile, user)
+	err = yaml.Unmarshal(yamlFile, &user)
 	if err != nil {
 		log.Fatalf("Unmarshal err: %s\n", err)
 	}
