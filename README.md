@@ -40,7 +40,7 @@ A full-stack Go Revel webapplication that enables users to create news articles 
 
 ## Completion Status
 
-Working on it...
+Working on it... (essential development version done)
 
 ## Task Checklist
 
