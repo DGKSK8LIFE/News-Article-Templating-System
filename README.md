@@ -4,12 +4,13 @@ A full-stack Go Revel webapplication that enables users to create news articles 
 
 ## Installation
 
-1. git pull the project
-2. Install dependencies (go modules are already handled with dep); just need to install the revel cli
-3. Run the `setup.sql` script on an sql database with the name `articles`
-4. Put a valid database user in `DB_user.yaml` file
-5. Have fun and run with `revel run`
-6. *Note that this is the development code; it's not ready for production out of the box*
+1. `cd $GOPATH/go/src`
+2. git pull the project
+3. Install dependencies (go modules are already handled with dep); just need to install the revel cli
+4. Run the `setup.sql` script on an sql database with the name `articles`
+5. Put a valid database user in `DB_user.yaml` file
+6. Have fun and run with `revel run`
+7. *Note that this is the development code; it's not ready for production out of the box* (some stuff may be tweaked in configs)
 
 ## Dependencies
 
