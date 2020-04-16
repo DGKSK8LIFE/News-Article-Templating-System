@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"News-Article-Templating-System-Revel-ok/app"
+	"News-Article-Templating-System/app"
 	"database/sql"
 	"fmt"
 	"html/template"
