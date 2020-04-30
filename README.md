@@ -21,7 +21,7 @@ A full-stack Go Revel webapplication that enables users to create news articles 
 - MySQL
 - Godep for dependency management
 - Go HTML Templates 
-- gomarkdown Engine for article formatting (finished)
+- gomarkdown
 - CSS Bootstrap
 - JSON (integrated with revel)
 - Moment.JS (imported on client-side with cloudflare min)
